@@ -1,0 +1,1 @@
+['Date', 'Open', 'High', 'Low', 'Close', 'volume', 'oi', 'Ticker', '%change', 'Buy_Hold_Value', 'Total_Portfolio_Value']
