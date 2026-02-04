@@ -1527,7 +1527,7 @@ def main():
                         if pd.notna(row.get('Entry_Date')):
                             entry_date = pd.to_datetime(row['Entry_Date'])
                         else:
-                            # Find most recent continuous holding period in cache
+                            # Find when this stock most recently entered the portfolio
                             # IMPORTANT: Only look at data from Nov 10, 2025 onwards (portfolio inception)
                             inception_date = pd.to_datetime('2025-11-10')
                             ticker_data = stock_level_df[
@@ -1536,31 +1536,30 @@ def main():
                             ]
                             
                             if not ticker_data.empty:
+                                # Sort by date
                                 ticker_data = ticker_data.sort_values('Date')
-                                ticker_data['YearMonth'] = ticker_data['Date'].dt.to_period('M')
                                 
-                                # Get all unique months this stock was held
-                                all_months = ticker_data['YearMonth'].unique()
-                                all_months = sorted(all_months)
+                                # Get all unique dates this stock appears
+                                all_dates = sorted(ticker_data['Date'].unique())
                                 
-                                # Find the start of the most recent continuous holding period
-                                # Work backwards from the end to find gaps
-                                latest_month = all_months[-1]
-                                continuous_start_month = latest_month
+                                # Work backwards from the latest date to find the entry point
+                                # Entry = first date in the most recent continuous streak
+                                latest_date = all_dates[-1]
+                                entry_date = all_dates[-1]  # Start with latest
                                 
-                                for i in range(len(all_months) - 1, 0, -1):
-                                    current_month = all_months[i]
-                                    prev_month = all_months[i-1]
+                                # Go backwards to find where the continuous streak started
+                                for i in range(len(all_dates) - 1, 0, -1):
+                                    current_date = all_dates[i]
+                                    prev_date = all_dates[i-1]
                                     
-                                    # Check if there's a gap (more than 1 month difference)
-                                    month_diff = (current_month.to_timestamp() - prev_month.to_timestamp()).days / 30
-                                    if month_diff > 1.5:  # Gap found
-                                        continuous_start_month = current_month
+                                    # Check if there's a gap (more than 35 days = missed a month)
+                                    days_gap = (current_date - prev_date).days
+                                    if days_gap > 35:  # Gap found - this is the entry after a break
+                                        entry_date = current_date
                                         break
-                                
-                                # Get earliest date in the continuous period
-                                continuous_data = ticker_data[ticker_data['YearMonth'] >= continuous_start_month]
-                                entry_date = continuous_data['Date'].min()
+                                    else:
+                                        # Continuous - keep going back
+                                        entry_date = prev_date
                                 
                                 # Normalize to 1st of month (rebalancing date)
                                 entry_date = entry_date.replace(day=1)
