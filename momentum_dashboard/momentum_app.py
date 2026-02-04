@@ -1501,8 +1501,69 @@ def main():
             except Exception as e:
                 st.error(f"Error reading Excel: {e}")
                 logging.error(f"Excel read error: {e}")
-        else:
-            st.warning("⚠️ Excel file not found. Using cached portfolio data.")
+        
+        # If Excel doesn't exist or failed, try current_portfolio.csv (for Streamlit Cloud)
+        if not portfolio_entries:
+            csv_path = os.path.join(BASE_DIR, "current_portfolio.csv")
+            if os.path.exists(csv_path):
+                try:
+                    st.info("📄 Loading current portfolio from current_portfolio.csv...")
+                    portfolio_csv = pd.read_csv(csv_path)
+                    
+                    # Get latest date from stock_level_df for reference
+                    latest_date = stock_level_df['Date'].max()
+                    
+                    for _, row in portfolio_csv.iterrows():
+                        ticker = row['Ticker']
+                        
+                        # Skip excluded symbols
+                        if ticker in EXCLUDED_SYMBOLS:
+                            continue
+                        
+                        # Get entry date from CSV or use default
+                        if pd.notna(row.get('Entry_Date')):
+                            entry_date = pd.to_datetime(row['Entry_Date'])
+                        else:
+                            # Default to start of cached data for this ticker
+                            ticker_data = stock_level_df[stock_level_df['Ticker'] == ticker]
+                            if not ticker_data.empty:
+                                entry_date = ticker_data['Date'].min()
+                            else:
+                                continue  # Skip if ticker not in cache
+                        
+                        # Get entry price from CSV or look up from cache
+                        if pd.notna(row.get('Entry_Price')) and row['Entry_Price'] > 0:
+                            entry_price = float(row['Entry_Price'])
+                        else:
+                            # Look up from cache data at entry date
+                            ticker_at_entry = stock_level_df[
+                                (stock_level_df['Ticker'] == ticker) & 
+                                (stock_level_df['Date'] >= entry_date)
+                            ].sort_values('Date')
+                            
+                            if not ticker_at_entry.empty:
+                                entry_price = ticker_at_entry.iloc[0]['Close']
+                            else:
+                                continue  # Skip if can't find entry price
+                        
+                        portfolio_entries[ticker] = {
+                            'entry_date': entry_date,
+                            'entry_price': entry_price
+                        }
+                    
+                    # Set df to stock_level_df for compatibility
+                    df = stock_level_df
+                    
+                    st.success(f"✅ **Portfolio loaded from CSV** | **{len(portfolio_entries)} stocks**")
+                    st.caption("📁 Source: current_portfolio.csv")
+                    
+                except Exception as e:
+                    st.error(f"Error reading current_portfolio.csv: {e}")
+                    logging.error(f"CSV read error: {e}")
+        
+        # Final fallback to cache if still no portfolio entries
+        if not portfolio_entries:
+            st.warning("⚠️ No portfolio configuration found. Using cached portfolio data.")
             
             # Fallback to cached data - get current portfolio from stock_level_df
             try:
