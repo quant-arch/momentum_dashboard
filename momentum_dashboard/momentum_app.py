@@ -1513,6 +1513,9 @@ def main():
                     # Get latest date from stock_level_df for reference
                     latest_date = stock_level_df['Date'].max()
                     
+                    # Track missing stocks
+                    missing_stocks = []
+                    
                     for _, row in portfolio_csv.iterrows():
                         ticker = row['Ticker']
                         
@@ -1524,18 +1527,20 @@ def main():
                         if pd.notna(row.get('Entry_Date')):
                             entry_date = pd.to_datetime(row['Entry_Date'])
                         else:
-                            # Default to start of cached data for this ticker
+                            # Default to start of cached data for this ticker or Nov 10, 2025
                             ticker_data = stock_level_df[stock_level_df['Ticker'] == ticker]
                             if not ticker_data.empty:
                                 entry_date = ticker_data['Date'].min()
                             else:
-                                continue  # Skip if ticker not in cache
+                                # Use default inception date if not in cache
+                                entry_date = pd.to_datetime('2025-11-10')
+                                missing_stocks.append(ticker)
                         
                         # Get entry price from CSV or look up from cache
                         if pd.notna(row.get('Entry_Price')) and row['Entry_Price'] > 0:
                             entry_price = float(row['Entry_Price'])
                         else:
-                            # Look up from cache data at entry date
+                            # Try to look up from cache data at entry date
                             ticker_at_entry = stock_level_df[
                                 (stock_level_df['Ticker'] == ticker) & 
                                 (stock_level_df['Date'] >= entry_date)
@@ -1544,7 +1549,25 @@ def main():
                             if not ticker_at_entry.empty:
                                 entry_price = ticker_at_entry.iloc[0]['Close']
                             else:
-                                continue  # Skip if can't find entry price
+                                # Stock not in cache - fetch from API
+                                try:
+                                    client = get_td_client()
+                                    data = client.get_historic_data(ticker, duration='3 M', bar_size='EOD')
+                                    if data is not None and not data.empty:
+                                        data['Date'] = pd.to_datetime(data['Date'])
+                                        # Get price on or after entry date
+                                        entry_data = data[data['Date'] >= entry_date]
+                                        if not entry_data.empty:
+                                            entry_price = entry_data.iloc[0]['Close']
+                                        else:
+                                            # Use first available price
+                                            entry_price = data.iloc[0]['Close']
+                                    else:
+                                        st.warning(f"⚠️ Could not fetch data for {ticker}, skipping...")
+                                        continue
+                                except Exception as e:
+                                    st.warning(f"⚠️ Error fetching {ticker}: {e}, skipping...")
+                                    continue
                         
                         portfolio_entries[ticker] = {
                             'entry_date': entry_date,
@@ -1553,6 +1576,10 @@ def main():
                     
                     # Set df to stock_level_df for compatibility
                     df = stock_level_df
+                    
+                    # Show info about missing stocks
+                    if missing_stocks:
+                        st.info(f"ℹ️ Fetched data for {len(missing_stocks)} stocks not in momentum history: {', '.join(missing_stocks[:5])}{'...' if len(missing_stocks) > 5 else ''}")
                     
                     st.success(f"✅ **Portfolio loaded from CSV** | **{len(portfolio_entries)} stocks**")
                     st.caption("📁 Source: current_portfolio.csv")
