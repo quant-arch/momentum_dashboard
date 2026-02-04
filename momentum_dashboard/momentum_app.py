@@ -1561,6 +1561,9 @@ def main():
                                 # Get earliest date in the continuous period
                                 continuous_data = ticker_data[ticker_data['YearMonth'] >= continuous_start_month]
                                 entry_date = continuous_data['Date'].min()
+                                
+                                # Normalize to 1st of month (rebalancing date)
+                                entry_date = entry_date.replace(day=1)
                             else:
                                 # Use default inception date if not in cache
                                 entry_date = inception_date
