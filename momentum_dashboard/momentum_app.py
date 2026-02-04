@@ -1412,6 +1412,8 @@ def main():
         # Allows capturing manual January changes recorded in the file
         excel_path = r"C:\Users\anike\Desktop\Ocean_dev\Momentum Handover\Momentum Handover\Trials\Nifty_500_2025_Apr_20_stocks_results_GoldSilverDebt_buy&hold_returns.xlsx"
         portfolio_entries = {}
+        df = None  # Initialize df variable
+        latest_date = None  # Initialize latest_date variable
         
         if os.path.exists(excel_path):
             try:
@@ -1527,6 +1529,9 @@ def main():
                         'entry_date': entry_date,
                         'entry_price': entry_price
                     }
+                
+                # Also set df to stock_level_df for compatibility with downstream code
+                df = stock_level_df
                 
                 st.success(f"✅ **Portfolio loaded from cache** | As of: **{pd.to_datetime(latest_date).strftime('%Y-%m-%d')}** | **{len(portfolio_entries)} stocks**")
                 st.caption("📁 Source: Cached data")
