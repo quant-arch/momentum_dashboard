@@ -1528,7 +1528,13 @@ def main():
                             entry_date = pd.to_datetime(row['Entry_Date'])
                         else:
                             # Find most recent continuous holding period in cache
-                            ticker_data = stock_level_df[stock_level_df['Ticker'] == ticker]
+                            # IMPORTANT: Only look at data from Nov 10, 2025 onwards (portfolio inception)
+                            inception_date = pd.to_datetime('2025-11-10')
+                            ticker_data = stock_level_df[
+                                (stock_level_df['Ticker'] == ticker) & 
+                                (stock_level_df['Date'] >= inception_date)
+                            ]
+                            
                             if not ticker_data.empty:
                                 ticker_data = ticker_data.sort_values('Date')
                                 ticker_data['YearMonth'] = ticker_data['Date'].dt.to_period('M')
@@ -1557,7 +1563,7 @@ def main():
                                 entry_date = continuous_data['Date'].min()
                             else:
                                 # Use default inception date if not in cache
-                                entry_date = pd.to_datetime('2025-11-10')
+                                entry_date = inception_date
                                 missing_stocks.append(ticker)
                         
                         # Get entry price from CSV or look up from cache
