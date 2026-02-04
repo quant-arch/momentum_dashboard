@@ -1785,14 +1785,44 @@ def main():
                     if not ticker_data.empty:
                         ticker_data['Date'] = pd.to_datetime(ticker_data['Date'])
                         ticker_data = ticker_data.sort_values('Date')
-                        # Get price on  or after entry date
+                        # Get price on or after entry date
                         entry_data = ticker_data[ticker_data['Date'] >= entry_date]
                         if not entry_data.empty:
                             entry_price = entry_data.iloc[0]['Open']  # Use Open from entry date
                         else:
-                            continue  # Skip if can't find entry price
+                            # Fetch from API
+                            try:
+                                client = get_td_client()
+                                data = client.get_historic_data(ticker, duration='3 M', bar_size='EOD')
+                                if data is not None and not data.empty:
+                                    data['Date'] = pd.to_datetime(data['Date'])
+                                    entry_data = data[data['Date'] >= entry_date]
+                                    if not entry_data.empty:
+                                        entry_price = entry_data.iloc[0]['Open']
+                                    else:
+                                        entry_price = data.iloc[0]['Open']
+                                else:
+                                    continue  # Skip if can't fetch
+                            except Exception as e:
+                                logging.error(f"Error fetching entry price for {ticker}: {e}")
+                                continue
                     else:
-                        continue
+                        # Not in cache - fetch from API
+                        try:
+                            client = get_td_client()
+                            data = client.get_historic_data(ticker, duration='3 M', bar_size='EOD')
+                            if data is not None and not data.empty:
+                                data['Date'] = pd.to_datetime(data['Date'])
+                                entry_data = data[data['Date'] >= entry_date]
+                                if not entry_data.empty:
+                                    entry_price = entry_data.iloc[0]['Open']
+                                else:
+                                    entry_price = data.iloc[0]['Open']
+                            else:
+                                continue  # Skip if can't fetch
+                        except Exception as e:
+                            logging.error(f"Error fetching entry price for {ticker}: {e}")
+                            continue
                 
                 # Get current price from live data or cached data
                 current_price = None
@@ -1800,7 +1830,7 @@ def main():
                     current_price = st.session_state.live_data[ticker]['price']
                 else:
                     # Fallback to Excel data first, then stock_level_df
-                    if 'df' in locals() and not df.empty:
+                    if 'df' in locals() and df is not None and not df.empty:
                         latest_ticker_row = df[(df['Ticker'] == ticker) & (df['Date'] == latest_date)]
                         if not latest_ticker_row.empty:
                             current_price = latest_ticker_row.iloc[0]['Close']
@@ -1812,6 +1842,15 @@ def main():
                             ticker_data_fallback['Date'] = pd.to_datetime(ticker_data_fallback['Date'])
                             ticker_data_fallback = ticker_data_fallback.sort_values('Date')
                             current_price = ticker_data_fallback['Close'].iloc[-1]
+                        else:
+                            # Not in cache - try to fetch latest price from API
+                            try:
+                                client = get_td_client()
+                                data = client.get_historic_data(ticker, duration='1 D', bar_size='15 mins')
+                                if data is not None and not data.empty:
+                                    current_price = data['Close'].iloc[-1]
+                            except Exception as e:
+                                logging.error(f"Error fetching current price for {ticker}: {e}")
                 
                 # Calculate holding period
                 holding_days = (today - entry_date).days
