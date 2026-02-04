@@ -1500,11 +1500,41 @@ def main():
                 st.error(f"Error reading Excel: {e}")
                 logging.error(f"Excel read error: {e}")
         else:
-            st.warning("⚠️ Excel file not found. Falling back to cache.")
+            st.warning("⚠️ Excel file not found. Using cached portfolio data.")
             
-            # Fallback to monthly cached data
-            from portfolio_analysis_helpers import get_active_portfolio
-            portfolio_entries = get_active_portfolio(stock_level_df, start_date='2025-11-10')
+            # Fallback to cached data - get current portfolio from stock_level_df
+            try:
+                # Get the latest date from cached data
+                latest_date = stock_level_df['Date'].max()
+                
+                # Get stocks active on latest date
+                current_holdings = stock_level_df[stock_level_df['Date'] == latest_date]
+                
+                # Filter out excluded symbols
+                if EXCLUDED_SYMBOLS:
+                    current_holdings = current_holdings[~current_holdings['Ticker'].isin(EXCLUDED_SYMBOLS)]
+                
+                # For each active stock, find entry date/price from cache
+                for ticker in current_holdings['Ticker'].unique():
+                    stock_hist = stock_level_df[stock_level_df['Ticker'] == ticker].sort_values('Date')
+                    
+                    # Get first occurrence as entry
+                    entry_row = stock_hist.iloc[0]
+                    entry_date = entry_row['Date']
+                    entry_price = entry_row['Close']
+                    
+                    portfolio_entries[ticker] = {
+                        'entry_date': entry_date,
+                        'entry_price': entry_price
+                    }
+                
+                st.success(f"✅ **Portfolio loaded from cache** | As of: **{pd.to_datetime(latest_date).strftime('%Y-%m-%d')}** | **{len(portfolio_entries)} stocks**")
+                st.caption("📁 Source: Cached data")
+                
+            except Exception as e:
+                st.error(f"Error loading from cache: {e}")
+                logging.error(f"Cache fallback error: {e}")
+                portfolio_entries = {}
 
         current_portfolio_stocks = list(portfolio_entries.keys())
         
