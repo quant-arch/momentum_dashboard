@@ -6,3 +6,5 @@ openpyxl
 python-dateutil
 fpdf
 tqdm
+lz4
+urllib3
