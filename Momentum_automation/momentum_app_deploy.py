@@ -1758,9 +1758,34 @@ def main():
                     st.session_state.live_data = live_prices
                     st.session_state.live_fetch_time = datetime.now()
             
-            # Show last update time
+            # Show last update time with market hours awareness
             if 'live_fetch_time' in st.session_state:
-                st.info(f"📅 Last updated: {st.session_state.live_fetch_time.strftime('%Y-%m-%d %H:%M:%S')}")
+                fetch_time = st.session_state.live_fetch_time
+                current_time = datetime.now()
+                
+                # Check if market is open (9:15 AM to 3:30 PM IST, Mon-Fri)
+                market_open_time = current_time.replace(hour=9, minute=15, second=0, microsecond=0)
+                market_close_time = current_time.replace(hour=15, minute=30, second=0, microsecond=0)
+                is_weekday = current_time.weekday() < 5  # Monday = 0, Friday = 4
+                is_market_hours = is_weekday and market_open_time <= current_time <= market_close_time
+                
+                # Get the latest price timestamp from any stock
+                latest_price_time = None
+                if 'live_data' in st.session_state and st.session_state.live_data:
+                    price_times = [v['time'] for v in st.session_state.live_data.values() if 'time' in v]
+                    if price_times:
+                        latest_price_time = max(price_times)
+                
+                # Display with appropriate message
+                if is_market_hours:
+                    market_status = "🟢 Market Open"
+                else:
+                    market_status = "🔴 Market Closed"
+                
+                if latest_price_time:
+                    st.info(f"{market_status} | 🔄 Refreshed: {fetch_time.strftime('%H:%M:%S')} | 📊 Price Data From: {latest_price_time.strftime('%Y-%m-%d %H:%M:%S')}")
+                else:
+                    st.info(f"{market_status} | 🔄 Last refreshed: {fetch_time.strftime('%Y-%m-%d %H:%M:%S')}")
             
             # --- CALCULATE PORTFOLIO METRICS (NAV - Normalized to Base 100) ---
             # Calculate actual initial NAV (Nov 10, 2025)
