@@ -1739,13 +1739,22 @@ def main():
                     
                     for i, ticker in enumerate(current_portfolio_stocks):
                         try:
-                            # Fetch last 1 day data at 15-minute interval
-                            data = client.get_historic_data(ticker, duration='1 D', bar_size='15 mins')
+                            # Fetch today's EOD data (most reliable for post-market or near-close)
+                            data = client.get_historic_data(ticker, duration='5 D', bar_size='eod')
                             if data is not None and not data.empty:
-                                # Get the latest closing price
-                                last_close = data['Close'].iloc[-1]
-                                last_time = data['Date'].iloc[-1] if 'Date' in data.columns else datetime.now()
+                                # Get the latest closing price (most recent trading day)
+                                data = data.sort_values('Date', ascending=False)
+                                last_close = data['Close'].iloc[0]
+                                last_time = data['Date'].iloc[0]
                                 live_prices[ticker] = {'price': last_close, 'time': last_time}
+                            else:
+                                # Fallback: try 1-minute data for very recent price
+                                data_intraday = client.get_historic_data(ticker, duration='1 D', bar_size='1 min')
+                                if data_intraday is not None and not data_intraday.empty:
+                                    data_intraday = data_intraday.sort_values('Date', ascending=False)
+                                    last_close = data_intraday['Close'].iloc[0]
+                                    last_time = data_intraday['Date'].iloc[0]
+                                    live_prices[ticker] = {'price': last_close, 'time': last_time}
                         except Exception as e:
                             logging.error(f"Error fetching live price for {ticker}: {e}")
                         
