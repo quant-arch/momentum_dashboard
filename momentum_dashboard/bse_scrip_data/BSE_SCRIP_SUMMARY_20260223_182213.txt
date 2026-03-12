@@ -1,0 +1,62 @@
+===============================================================================================
+BSE SCRIP CODE DATA - SUMMARY REPORT
+===============================================================================================
+
+Report Generated: 2026-02-23 18:22:13
+Duration Requested: 10 Y
+
+BSE STOCKS FETCHED (Scrip Code to Symbol Mapping)
+-----------------------------------------------------------------------------------------------
+
+Reliance Industries
+  Scrip Code: BOM:500325
+  Symbol: RELIANCE
+  File: BOM_500325_RELIANCE_Reliance_Industries_OHLCV.csv
+  Available From: 2016-02-26
+  Available Till: 2026-02-23
+  Total Records: 2476
+  Days Covered: 3650 days
+
+Tata Consultancy Services
+  Scrip Code: BOM:532540
+  Symbol: TCS
+  File: BOM_532540_TCS_Tata_Consultancy_Services_OHLCV.csv
+  Available From: 2016-02-26
+  Available Till: 2026-02-23
+  Total Records: 2476
+  Days Covered: 3650 days
+
+Cipla
+  Scrip Code: BOM:532382
+  Symbol: CIPLA
+  File: BOM_532382_CIPLA_Cipla_OHLCV.csv
+  Available From: 2016-02-26
+  Available Till: 2026-02-23
+  Total Records: 2476
+  Days Covered: 3650 days
+
+
+===============================================================================================
+SUMMARY
+===============================================================================================
+
+Total Stocks Processed: 3
+Successfully Downloaded: 3
+Failed Downloads: 0
+Success Rate: 100.0%
+
+CSV Files Location: C:\Users\anike\Desktop\Ocean_dev\Momentum Handover\Momentum Handover\momentum_dashboard\bse_scrip_data
+
+CSV File Format:
+  - Date (YYYY-MM-DD format)
+  - Open (Opening price in INR)
+  - High (Highest price)
+  - Low (Lowest price)
+  - Close (Closing price)
+  - Volume (Trading volume in shares)
+
+BSE Scrip Code Format: BOM:XXXXXX
+  - BOM = BSE Mumbai exchange
+  - XXXXXX = 6-digit scrip code
+
+===============================================================================================

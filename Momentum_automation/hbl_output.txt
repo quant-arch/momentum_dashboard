@@ -1,0 +1,23 @@
+﻿================================================================================
+HBLENGINE PORTFOLIO CONTINUITY ANALYSIS
+================================================================================
+
+1. PORTFOLIO PRESENCE:
+   First appearance: 2025-11-10
+   Latest date: 2026-02-03
+   Total trading days: 60
+
+2. MONTHLY BREAKDOWN:
+   2025-11: 15 days
+   2025-12: 22 days
+   2026-01: 20 days
+   2026-02: 3 days
+
+3. PERFORMANCE METRICS:
+   Entry price (Nov 10): Rs.1,060.00
+   Current price: Rs.785.15
+   Total return: -25.93%
+   Avg daily return: -0.508%
+   Daily volatility: 3.476%
+
+4. CURRENT STATUS:

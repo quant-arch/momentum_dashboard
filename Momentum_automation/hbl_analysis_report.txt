@@ -1,0 +1,49 @@
+================================================================================
+HBLENGINE PORTFOLIO ANALYSIS
+================================================================================
+
+1. PORTFOLIO PRESENCE:
+   First entry: 2025-11-10
+   Latest date: 2026-02-03
+   Total days: 60
+
+2. MONTHLY BREAKDOWN:
+   2025-11: 15 days
+   2025-12: 22 days
+   2026-01: 20 days
+   2026-02: 3 days
+
+3. PERFORMANCE:
+   Entry price: Rs.1,060.00
+   Current price: Rs.785.15
+   Return: -25.93%
+
+4. CURRENT STATUS:
+   In portfolio today: YES
+
+5. CONTINUITY:
+   Missing: None
+   Status: CONTINUOUS since Nov 10, 2025
+
+6. WHY HBLENGINE STAYS IN PORTFOLIO:
+
+   a) CONTINUOUS SELECTION: Never left since inception
+   b) PRICE QUALIFIED: Rs.785.15 < Rs.10,000 (passes filter)
+   c) MOMENTUM RANKING: Consistently in top 20 by Combined_Rank
+   d) STRATEGY KEEPS IT: Even with negative returns, momentum
+      strategy holds positions based on ranking, not returns
+
+================================================================================
+KEY INSIGHT:
+================================================================================
+HBLENGINE has been CONTINUOUSLY selected every month because:
+
+1. It consistently ranks in TOP 20 by momentum + FIP score
+2. Price stays under Rs.10,000 threshold
+3. Momentum strategy is RANKING-BASED, not return-based
+4. As long as it's in top 20 each rebalancing, it stays
+5. Other stocks have WORSE momentum scores each month
+
+This is NORMAL - momentum strategies hold losing positions
+if they still have better relative momentum than alternatives.
+================================================================================

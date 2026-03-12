@@ -1,0 +1,116 @@
+==========================================================================================
+BSE SCRIP CODE DATA AVAILABILITY REPORT
+==========================================================================================
+
+Report Generated: 2026-02-23 18:20:36
+Duration Requested: 10 Y
+
+BSE STOCKS FETCHED (with Scrip Codes)
+------------------------------------------------------------------------------------------
+
+Reliance Industries
+  Scrip Code: BOM:500325
+  Status: [NOT AVAILABLE] - Data not available
+
+TCS
+  Scrip Code: BOM:532540
+  Status: [NOT AVAILABLE] - Data not available
+
+HDFC Bank
+  Scrip Code: BOM:500180
+  Status: [NOT AVAILABLE] - Data not available
+
+ICICI Bank
+  Scrip Code: BOM:532174
+  Status: [NOT AVAILABLE] - Data not available
+
+Axis Bank
+  Scrip Code: BOM:532215
+  Status: [NOT AVAILABLE] - Data not available
+
+Kotak Mahindra Bank
+  Scrip Code: BOM:500247
+  Status: [NOT AVAILABLE] - Data not available
+
+State Bank of India
+  Scrip Code: BOM:500112
+  Status: [NOT AVAILABLE] - Data not available
+
+Power Grid
+  Scrip Code: BOM:532898
+  Status: [NOT AVAILABLE] - Data not available
+
+NTPC
+  Scrip Code: BOM:500104
+  Status: [NOT AVAILABLE] - Data not available
+
+Coal India
+  Scrip Code: BOM:533278
+  Status: [NOT AVAILABLE] - Data not available
+
+Bajaj Auto
+  Scrip Code: BOM:500182
+  Status: [NOT AVAILABLE] - Data not available
+
+Maruti Suzuki
+  Scrip Code: BOM:532500
+  Status: [NOT AVAILABLE] - Data not available
+
+Hero MotoCorp
+  Scrip Code: BOM:500182
+  Status: [NOT AVAILABLE] - Data not available
+
+Infosys
+  Scrip Code: BOM:500209
+  Status: [NOT AVAILABLE] - Data not available
+
+Wipro
+  Scrip Code: BOM:507685
+  Status: [NOT AVAILABLE] - Data not available
+
+ITC
+  Scrip Code: BOM:500226
+  Status: [NOT AVAILABLE] - Data not available
+
+Hindustan Unilever
+  Scrip Code: BOM:500696
+  Status: [NOT AVAILABLE] - Data not available
+
+L&T
+  Scrip Code: BOM:500510
+  Status: [NOT AVAILABLE] - Data not available
+
+Airtel
+  Scrip Code: BOM:532806
+  Status: [NOT AVAILABLE] - Data not available
+
+Cipla
+  Scrip Code: BOM:532382
+  Status: [NOT AVAILABLE] - Data not available
+
+
+==========================================================================================
+SUMMARY
+==========================================================================================
+
+Total Stocks Processed: 20
+Successful Downloads: 0
+Failed Downloads: 20
+Success Rate: 0.0%
+
+CSV Files Location: C:\Users\anike\Desktop\Ocean_dev\Momentum Handover\Momentum Handover\momentum_dashboard\bse_scrip_data
+
+Column Format in CSV Files:
+  - Date (YYYY-MM-DD format)
+  - Open (Opening price in INR)
+  - High (Highest price)
+  - Low (Lowest price)
+  - Close (Closing price)
+  - Volume (Trading volume in shares)
+
+Useful BSE Resources:
+  - BSE Website: https://www.bseindia.com/
+  - Scrip Search: https://www.bseindia.com/issuers/corpinfo/
+  - Scrip Code Format: BOM:XXXXXX (BOM = BSE Mumbai)
+
+==========================================================================================

@@ -1,0 +1,103 @@
+================================================================================
+BENCHMARK DATA AVAILABILITY REPORT
+================================================================================
+
+Report Generated: 2026-02-23 18:12:25
+
+NIFTY BENCHMARKS (5 Files)
+--------------------------------------------------------------------------------
+
+NIFTY 50
+  File: NIFTY_50_OHLCV.csv
+  Available From: 2016-02-26
+  Available Till: 2026-02-23
+  Total Records: 2477
+  Days Covered: 3650 days
+
+NIFTY 100
+  File: NIFTY_100_OHLCV.csv
+  Available From: 2016-02-26
+  Available Till: 2026-02-23
+  Total Records: 2477
+  Days Covered: 3650 days
+
+NIFTY MIDCAP 150
+  File: NIFTY_MIDCAP_150_OHLCV.csv
+  Available From: 2019-01-14
+  Available Till: 2026-02-23
+  Total Records: 1765
+  Days Covered: 2597 days
+
+NIFTY SMALLCAP 250
+  File: NIFTY_SMALLCAP_250_OHLCV.csv
+  Available From: 2019-01-14
+  Available Till: 2026-02-23
+  Total Records: 1760
+  Days Covered: 2597 days
+
+NIFTY 500
+  File: NIFTY_500_OHLCV.csv
+  Available From: 2016-02-26
+  Available Till: 2026-02-23
+  Total Records: 2477
+  Days Covered: 3650 days
+
+
+BSE BENCHMARKS (5 Files)
+--------------------------------------------------------------------------------
+
+BSE SENSEX
+  File: BSE_SENSEX_OHLCV.csv
+  Available From: 2016-02-26
+  Available Till: 2026-02-23
+  Total Records: 2475
+  Days Covered: 3650 days
+
+BSE DOLLEX
+  File: BSE_DOLLEX_OHLCV.csv
+  Available From: 2023-01-11
+  Available Till: 2026-02-23
+  Total Records: 721
+  Days Covered: 1139 days
+
+BSE MIDCAP
+  File: BSE_MIDCAP_OHLCV.csv
+  Available From: 2024-03-20
+  Available Till: 2026-02-23
+  Total Records: 479
+  Days Covered: 705 days
+
+BSE SMALLCAP
+  File: BSE_SMALLCAP_OHLCV.csv
+  Available From: 2024-02-29
+  Available Till: 2026-02-23
+  Total Records: 493
+  Days Covered: 725 days
+
+BSE 100
+  File: BSE_100_OHLCV.csv
+  Available From: 2016-02-26
+  Available Till: 2026-02-23
+  Total Records: 2475
+  Days Covered: 3650 days
+
+
+================================================================================
+SUMMARY
+================================================================================
+
+NIFTY Benchmarks Available: 5/5
+BSE Benchmarks Available: 5/5
+Total CSV Files Generated: 10/10
+
+CSV Files Location: C:\Users\anike\Desktop\Ocean_dev\Momentum Handover\Momentum Handover\momentum_dashboard\benchmark_data
+
+Column Format in CSV Files:
+  - Date (YYYY-MM-DD format)
+  - Open (Opening price)
+  - High (Highest price)
+  - Low (Lowest price)
+  - Close (Closing price)
+  - Volume (Trading volume)
+
+================================================================================

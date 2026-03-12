@@ -1,0 +1,820 @@
+================================================================================
+MOMENTUM DASHBOARD - AWS VM + GITHUB + STREAMLIT CLOUD DEPLOYMENT GUIDE
+================================================================================
+
+Complete Step-by-Step Implementation Plan
+Author: Your AI Assistant
+Date: February 3, 2026
+Purpose: Deploy momentum strategy dashboard with secure credentials on AWS VM
+
+================================================================================
+ARCHITECTURE OVERVIEW
+================================================================================
+
+Component 1: AWS WINDOWS VM (Backend - Always Running)
+- Runs: Data fetching scripts (with TrueData credentials)
+- Contains: td_client.py, momentum_backend.py, .env file
+- Task: Fetch data every 30 min, generate cache, push to GitHub
+- Security: Credentials NEVER leave this VM
+
+Component 2: GITHUB REPOSITORY (Data Storage & Version Control)
+- Stores: Frontend code (momentum_app.py) + cache files
+- Does NOT store: td_client.py, .env, credentials
+- Triggers: Streamlit Cloud auto-deploy on push
+
+Component 3: STREAMLIT COMMUNITY CLOUD (Frontend - Public)
+- Runs: Visualization only (momentum_app.py)
+- Reads: Cache files from GitHub
+- Security: NO credentials, NO TrueData API access, read-only
+
+================================================================================
+PART 1: AWS EC2 WINDOWS VM SETUP
+================================================================================
+
+STEP 1.1: CREATE AWS EC2 INSTANCE
+----------------------------------
+1. Log in to AWS Console (https://console.aws.amazon.com)
+2. Navigate to EC2 → Launch Instance
+3. Configure:
+   Name: momentum-backend-vm
+   OS: Windows Server 2022 Base
+   Instance Type: t3.small (2 vCPU, 2 GB RAM) - $15/month
+   Key Pair: Create new or use existing (for RDP access)
+   Storage: 30 GB gp3 SSD
+   Security Group: 
+     - Inbound: RDP (3389) from your IP only
+     - Outbound: All traffic (for GitHub, TrueData API)
+
+4. Launch instance
+5. Note down: Public IP address, Key Pair path
+
+STEP 1.2: CONNECT TO VM VIA RDP
+--------------------------------
+1. Get Windows password:
+   - EC2 Console → Select instance → Actions → Get Windows Password
+   - Upload your .pem key file
+   - Copy the generated password
+
+2. Connect via Remote Desktop:
+   - Windows: Press Win+R → mstsc
+   - Enter Public IP: 54.XXX.XXX.XXX
+   - Username: Administrator
+   - Password: (from step 1)
+
+STEP 1.3: INSTALL REQUIRED SOFTWARE ON VM
+------------------------------------------
+Once connected to VM via RDP:
+
+A. Install Python 3.11
+   - Download: https://www.python.org/downloads/
+   - Run installer
+   - ✓ Check "Add Python to PATH"
+   - Install
+
+B. Install Git
+   - Download: https://git-scm.com/download/win
+   - Run installer
+   - Use default settings
+
+C. Verify installations:
+   Open PowerShell and run:
+   ```
+   python --version
+   git --version
+   ```
+
+STEP 1.4: SETUP PROJECT ON VM
+------------------------------
+1. Create project directory:
+   ```
+   mkdir C:\MomentumBackend
+   cd C:\MomentumBackend
+   ```
+
+2. Create folder structure:
+   ```
+   C:\MomentumBackend\
+   ├── local_backend\
+   │   ├── .env (create this)
+   │   ├── td_client.py (copy from local)
+   │   ├── momentum_backend.py (copy from local)
+   │   ├── refresh_prices.py (copy from local)
+   │   └── requirements.txt
+   └── cache\
+   ```
+
+3. Transfer files from your local PC to VM:
+   Option A: Use RDP file sharing (map local drive)
+   Option B: Copy via GitHub (temporarily, then delete)
+   Option C: Use AWS S3 bucket as intermediate storage
+
+4. Create .env file on VM:
+   ```
+   C:\MomentumBackend\local_backend\.env
+
+   TRUEDATA_USERNAME=your_truedata_username
+   TRUEDATA_PASSWORD=your_truedata_password
+   TRUEDATA_PORT=8082
+   ```
+
+5. Install Python dependencies:
+   ```
+   cd C:\MomentumBackend\local_backend
+   pip install -r requirements.txt
+   ```
+
+STEP 1.5: CONFIGURE GIT ON VM
+------------------------------
+1. Set Git credentials:
+   ```
+   git config --global user.name "Your Name"
+   git config --global user.email "your.email@example.com"
+   ```
+
+2. Setup GitHub authentication (SSH - Recommended):
+   ```
+   ssh-keygen -t ed25519 -C "your.email@example.com"
+   # Press Enter 3 times (default location, no passphrase)
+   
+   # Copy public key:
+   type C:\Users\Administrator\.ssh\id_ed25519.pub
+   ```
+
+3. Add SSH key to GitHub:
+   - Go to: https://github.com/settings/keys
+   - Click "New SSH key"
+   - Paste the key from step 2
+   - Save
+
+4. Test connection:
+   ```
+   ssh -T git@github.com
+   # Should say: "Hi username! You've successfully authenticated..."
+   ```
+
+5. Clone your repository:
+   ```
+   cd C:\MomentumBackend
+   git clone git@github.com:your-username/momentum-dashboard.git
+   ```
+
+STEP 1.6: CREATE BACKEND SCRIPTS
+---------------------------------
+Create these files in C:\MomentumBackend\local_backend\
+
+FILE: refresh_prices.py
+-----------------------
+import os
+import sys
+from pathlib import Path
+from dotenv import load_dotenv
+import pandas as pd
+from datetime import datetime
+import subprocess
+
+# Add parent directory to path for td_client import
+sys.path.insert(0, str(Path(__file__).parent))
+from td_client import TrueDataClient
+
+# Load environment variables
+load_dotenv()
+username = os.getenv('TRUEDATA_USERNAME')
+password = os.getenv('TRUEDATA_PASSWORD')
+port = int(os.getenv('TRUEDATA_PORT', 8082))
+
+def fetch_current_prices():
+    """Fetch latest prices for all portfolio stocks"""
+    
+    # Initialize client
+    client = TrueDataClient(username, password, port)
+    
+    # Read portfolio holdings (from cache or Excel)
+    cache_dir = Path(__file__).parent.parent / 'cache'
+    portfolio_file = cache_dir / 'portfolio_holdings.csv'
+    
+    if not portfolio_file.exists():
+        print(f"ERROR: Portfolio file not found: {portfolio_file}")
+        return
+    
+    portfolio = pd.read_csv(portfolio_file)
+    tickers = portfolio['Ticker'].unique().tolist()
+    
+    print(f"Fetching prices for {len(tickers)} stocks...")
+    
+    # Fetch prices
+    prices_data = []
+    for ticker in tickers:
+        try:
+            # Get 15-min delayed price
+            data = client.get_historic_data(ticker, duration='1 D', bar_size='15 mins')
+            if data is not None and not data.empty:
+                latest_price = data['Close'].iloc[-1]
+                latest_time = data.index[-1] if hasattr(data.index, 'tolist') else datetime.now()
+                
+                prices_data.append({
+                    'Ticker': ticker,
+                    'Price': latest_price,
+                    'Timestamp': latest_time
+                })
+                print(f"  ✓ {ticker}: {latest_price}")
+        except Exception as e:
+            print(f"  ✗ {ticker}: Error - {e}")
+    
+    # Save to cache
+    if prices_data:
+        prices_df = pd.DataFrame(prices_data)
+        output_file = cache_dir / 'current_prices.csv'
+        prices_df.to_csv(output_file, index=False)
+        print(f"\n✓ Saved {len(prices_data)} prices to {output_file}")
+        return output_file
+    else:
+        print("\n✗ No prices fetched")
+        return None
+
+def push_to_github(cache_file):
+    """Commit and push cache file to GitHub"""
+    
+    repo_dir = Path(__file__).parent.parent
+    os.chdir(repo_dir)
+    
+    timestamp = datetime.now().strftime("%Y-%m-%d %I:%M %p")
+    
+    try:
+        # Git add
+        subprocess.run(['git', 'add', str(cache_file)], check=True)
+        
+        # Git commit
+        commit_msg = f"Price update: {timestamp}"
+        subprocess.run(['git', 'commit', '-m', commit_msg], check=True)
+        
+        # Git push
+        subprocess.run(['git', 'push', 'origin', 'main'], check=True)
+        
+        print(f"\n✓ Pushed to GitHub at {timestamp}")
+        return True
+    except subprocess.CalledProcessError as e:
+        print(f"\n✗ Git error: {e}")
+        return False
+
+if __name__ == "__main__":
+    print(f"\n{'='*60}")
+    print(f"Momentum Price Refresh - {datetime.now().strftime('%Y-%m-%d %I:%M %p')}")
+    print(f"{'='*60}\n")
+    
+    # Fetch prices
+    cache_file = fetch_current_prices()
+    
+    # Push to GitHub if running with --push flag
+    if cache_file and '--push' in sys.argv:
+        push_to_github(cache_file)
+    
+    print(f"\n{'='*60}")
+    print("Done!")
+    print(f"{'='*60}\n")
+
+
+FILE: refresh_full_data.py (for daily full refresh)
+----------------------------------------------------
+# Similar to refresh_prices.py but runs full momentum analysis
+# Updates all cache files: nav_df, stock_data, portfolio_daily, etc.
+# This runs once per day, while refresh_prices.py runs every 30 min
+
+[Include full momentum analysis code here]
+
+
+STEP 1.7: TEST SCRIPTS MANUALLY
+--------------------------------
+1. Test price refresh:
+   ```
+   cd C:\MomentumBackend\local_backend
+   python refresh_prices.py
+   ```
+   
+   Expected output:
+   - Fetching prices for XX stocks...
+   - ✓ HBLENGINE: 785.15
+   - ✓ CANBK: 148.20
+   - ...
+   - ✓ Saved XX prices to cache/current_prices.csv
+
+2. Test Git push:
+   ```
+   python refresh_prices.py --push
+   ```
+   
+   Expected:
+   - ✓ Pushed to GitHub at 2026-02-03 10:00 AM
+
+3. Verify on GitHub:
+   - Go to your repo: https://github.com/your-username/momentum-dashboard
+   - Check cache/current_prices.csv was updated
+
+================================================================================
+PART 2: WINDOWS TASK SCHEDULER SETUP ON VM
+================================================================================
+
+STEP 2.1: CREATE TASK FOR INTRADAY PRICE UPDATES (Every 30 min)
+----------------------------------------------------------------
+1. Open Task Scheduler on VM:
+   - Press Win+R → taskschd.msc → Enter
+
+2. Create New Task:
+   - Click "Create Task" (right panel)
+
+3. General Tab:
+   Name: Momentum Price Refresh - Intraday
+   Description: Fetch TrueData prices every 30 min during market hours
+   Security Options:
+     ✓ Run whether user is logged on or not
+     ✓ Run with highest privileges
+
+4. Triggers Tab → New:
+   Begin the task: On a schedule
+   Settings: Daily
+   Start: 9:00 AM
+   Repeat task every: 30 minutes
+   For a duration of: 6 hours 30 minutes (stops at 3:30 PM)
+   Days: Monday, Tuesday, Wednesday, Thursday, Friday
+   ✓ Enabled
+
+5. Actions Tab → New:
+   Action: Start a program
+   Program/script: C:\Python311\python.exe
+   Add arguments: C:\MomentumBackend\local_backend\refresh_prices.py --push
+   Start in: C:\MomentumBackend\local_backend
+
+6. Conditions Tab:
+   ✓ Start only if computer is on AC power (uncheck for VM)
+   ✓ Wake computer to run this task (optional)
+
+7. Settings Tab:
+   ✓ Allow task to be run on demand
+   ✓ Run task as soon as possible after scheduled start is missed
+   ✓ Stop task if runs longer than: 10 minutes
+   If the task is already running: Do not start a new instance
+
+8. Save task (enter Administrator password if prompted)
+
+STEP 2.2: CREATE TASK FOR DAILY FULL REFRESH
+---------------------------------------------
+Repeat steps 2.1 but:
+- Name: Momentum Data Refresh - Daily Full
+- Trigger: Daily at 8:30 AM (before market opens)
+- No repeat (runs once per day)
+- Action: python refresh_full_data.py --push
+- Duration: 30 minutes
+
+STEP 2.3: TEST TASKS
+---------------------
+1. Right-click task → Run
+2. Check Last Run Result: "The operation completed successfully (0x0)"
+3. Verify cache file updated on GitHub
+
+================================================================================
+PART 3: GITHUB REPOSITORY SETUP
+================================================================================
+
+STEP 3.1: CREATE GITHUB REPOSITORY
+-----------------------------------
+1. Go to: https://github.com/new
+2. Repository name: momentum-dashboard
+3. Visibility: Public (or Private if you have Pro)
+4. ✗ Do NOT initialize with README (we'll push from local)
+5. Create repository
+
+STEP 3.2: SETUP PROJECT STRUCTURE
+----------------------------------
+On your LOCAL PC (not VM), create this structure:
+
+momentum-dashboard/
+├── .gitignore
+├── .streamlit/
+│   └── config.toml
+├── README.md
+├── requirements.txt
+├── momentum_app.py (modified for cloud - see Step 3.4)
+└── cache/
+    ├── nav_df.parquet
+    ├── stock_data.parquet
+    ├── portfolio_daily.parquet
+    ├── current_prices.csv
+    ├── portfolio_holdings.csv
+    └── last_updated.txt
+
+STEP 3.3: CREATE .gitignore
+----------------------------
+Create file: .gitignore
+
+# credentials - NEVER commit
+.env
+credentials.json
+*.pem
+*.ppk
+
+# Local backend - NEVER commit
+local_backend/
+td_client.py
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+
+STEP 3.4: MODIFY momentum_app.py FOR CLOUD
+-------------------------------------------
+Remove from momentum_app.py:
+1. All td_client imports and usage
+2. All fetch_and_cache_all_data() calls
+3. All TrueData API code
+4. "Refresh Data" buttons that call API
+
+Add to momentum_app.py:
+1. Cache loading functions
+2. Last updated timestamp display
+3. Read-only mode indicators
+
+Example modifications:
+
+# REMOVE THIS:
+from td_client import TrueDataClient
+
+def get_td_client():
+    return TrueDataClient(...)
+
+
+# ADD THIS:
+@st.cache_data
+def load_cache_data():
+    cache_dir = Path("cache")
+    return {
+        'nav_df': pd.read_parquet(cache_dir / "nav_df.parquet"),
+        'stock_data': pd.read_parquet(cache_dir / "stock_data.parquet"),
+        'current_prices': pd.read_csv(cache_dir / "current_prices.csv"),
+    }
+
+# Display last update time
+with open('cache/last_updated.txt', 'r') as f:
+    last_updated = f.read().strip()
+st.info(f"📅 Data last updated: {last_updated}")
+
+
+STEP 3.5: CREATE .streamlit/config.toml
+----------------------------------------
+Create file: .streamlit/config.toml
+
+[server]
+headless = true
+port = 8501
+enableCORS = false
+
+[theme]
+# Allow users to choose theme (don't force dark mode)
+primaryColor = "#3b82f6"
+
+[browser]
+gatherUsageStats = false
+
+
+STEP 3.6: CREATE requirements.txt FOR CLOUD
+--------------------------------------------
+Create file: requirements.txt
+
+streamlit>=1.30.0
+pandas>=2.0.0
+numpy>=1.24.0
+plotly>=5.14.0
+openpyxl>=3.1.0
+pyarrow>=12.0.0
+python-dateutil>=2.8.0
+
+
+STEP 3.7: PUSH TO GITHUB
+-------------------------
+From your LOCAL PC:
+
+cd path/to/momentum-dashboard
+git init
+git add .
+git commit -m "Initial commit - cloud frontend"
+git branch -M main
+git remote add origin git@github.com:your-username/momentum-dashboard.git
+git push -u origin main
+
+
+IMPORTANT: Verify .gitignore is working:
+- Check GitHub repo
+- Ensure .env, td_client.py, local_backend/ are NOT visible
+- Only frontend code and cache files should be there
+
+================================================================================
+PART 4: STREAMLIT CLOUD DEPLOYMENT
+================================================================================
+
+STEP 4.1: CONNECT GITHUB TO STREAMLIT CLOUD
+--------------------------------------------
+1. Go to: https://share.streamlit.io/
+2. Sign in with GitHub
+3. Authorize Streamlit to access your repositories
+
+STEP 4.2: DEPLOY APP
+---------------------
+1. Click "New app"
+2. Repository: your-username/momentum-dashboard
+3. Branch: main
+4. Main file path: momentum_app.py
+5. Click "Deploy"
+
+6. Wait 2-3 minutes for deployment
+
+7. Your app URL: https://your-username-momentum-dashboard.streamlit.app/
+
+STEP 4.3: VERIFY DEPLOYMENT
+----------------------------
+1. Visit app URL
+2. Check all tabs load:
+   - Dashboard
+   - Monthly Analysis
+   - Live Tracking
+3. Verify "Last updated" timestamp shows
+4. Confirm no errors in logs
+
+STEP 4.4: CONFIGURE APP SETTINGS (Optional)
+--------------------------------------------
+1. Go to: https://share.streamlit.io/
+2. Click your app → Settings
+3. Secrets: (empty - no credentials needed)
+4. Python version: 3.11
+5. Save
+
+================================================================================
+PART 5: AUTOMATED UPDATE WORKFLOW
+================================================================================
+
+COMPLETE FLOW:
+--------------
+9:00 AM:  AWS VM Task Scheduler runs refresh_prices.py
+          ↓
+9:00:30 AM: Script fetches prices from TrueData (uses .env credentials on VM)
+          ↓
+9:01:00 AM: Script updates cache/current_prices.csv
+          ↓
+9:01:15 AM: Script pushes to GitHub (git push)
+          ↓
+9:01:30 AM: GitHub receives update
+          ↓
+9:01:45 AM: Streamlit Cloud detects GitHub push
+          ↓
+9:02:00 AM: Streamlit Cloud redeploys app
+          ↓
+9:03:00 AM: Users see updated prices (30 sec - 3 min old)
+
+REPEATS: Every 30 minutes during market hours (9:00 AM - 3:30 PM)
+
+DAILY FULL REFRESH:
+8:30 AM: Full data refresh (nav, portfolio, historical data)
+         Runs once per day, updates ALL cache files
+
+================================================================================
+PART 6: SECURITY CHECKLIST
+================================================================================
+
+✓ Credentials Security:
+  - .env file ONLY on AWS VM (never pushed to GitHub)
+  - td_client.py NOT in GitHub repo (blocked by .gitignore)
+  - No Streamlit Cloud secrets (not needed)
+  - AWS Security Group only allows RDP from your IP
+
+✓ Code Security:
+  - No hardcoded credentials in any files
+  - All sensitive imports removed from cloud version
+  - .gitignore properly configured
+
+✓ Access Control:
+  - AWS VM: Only you can access (via RDP with key)
+  - GitHub: Public repo but no credentials
+  - Streamlit Cloud: Public app but read-only, no API access
+
+✓ Data Security:
+  - Cache files contain only processed data (no credentials)
+  - Prices are public market data (non-sensitive)
+  - Portfolio composition visible but no account details
+
+================================================================================
+PART 7: MONITORING & MAINTENANCE
+================================================================================
+
+DAILY CHECKS (First Week):
+---------------------------
+1. Check AWS VM is running: EC2 Console
+2. Check Task Scheduler ran: VM → Task Scheduler → Last Run Result
+3. Check GitHub commits: https://github.com/your-username/momentum-dashboard/commits
+4. Check Streamlit app: https://your-username-momentum-dashboard.streamlit.app/
+5. Check "Last updated" timestamp matches expected time
+
+WEEKLY MAINTENANCE:
+-------------------
+1. RDP to AWS VM
+2. Check disk space: C:\ drive (should have >5 GB free)
+3. Review logs: C:\MomentumBackend\logs\
+4. Update Python packages: pip install --upgrade -r requirements.txt
+5. Windows updates: Check for updates, install if needed (may require restart)
+
+MONTHLY COSTS:
+--------------
+- AWS EC2 t3.small: ~$15/month
+- AWS EBS storage: ~$3/month
+- Data transfer: ~$1/month
+- Total: ~$19/month
+
+COST OPTIMIZATION:
+------------------
+- Use t3.micro if performance is acceptable: ~$8/month
+- Use Reserved Instance (1 year commitment): 40% savings
+- Stop VM during weekends (market closed): Save 28%
+
+TROUBLESHOOTING:
+----------------
+Q: Task Scheduler shows "Could not start (0x1)"
+A: Check Python path, check file paths, run manually first
+
+Q: GitHub push fails with authentication error
+A: Re-add SSH key, check git remote URL is SSH not HTTPS
+
+Q: Streamlit app shows old data
+A: Check GitHub commits, check VM Task Scheduler is running
+
+Q: TrueData API errors
+A: Check .env credentials, check TrueData account status, check network
+
+================================================================================
+PART 8: DISASTER RECOVERY
+================================================================================
+
+BACKUP STRATEGY:
+----------------
+1. AWS VM Snapshot (weekly):
+   - EC2 Console → Snapshots → Create Snapshot
+   - Stores entire VM state including .env file
+
+2. GitHub (automatic):
+   - All code and cache files versioned
+   - Can rollback to any commit
+
+3. Local Backup:
+   - Keep copy of .env file securely (password manager)
+   - Keep copy of td_client.py locally
+
+RECOVERY SCENARIOS:
+-------------------
+Scenario 1: VM Crashes
+- Launch new EC2 from snapshot
+- Restore and continue
+
+Scenario 2: Lost .env file
+- Restore from backup
+- Re-create from password manager
+
+Scenario 3: GitHub Account Issues
+- Change remote URL to new repo
+- Push from VM
+
+================================================================================
+COMPLETION CHECKLIST
+================================================================================
+
+Before going live, verify:
+
+AWS VM Setup:
+[ ] EC2 instance running
+[ ] Python, Git installed
+[ ] Project files copied
+[ ] .env file created with correct credentials
+[ ] Git SSH authentication working
+[ ] refresh_prices.py runs manually
+[ ] refresh_prices.py --push works (updates GitHub)
+
+Task Scheduler:
+[ ] Intraday task created (every 30 min)
+[ ] Daily task created (once per day)
+[ ] Both tasks tested manually
+[ ] Both tasks show "Success (0x0)" in last run
+
+GitHub:
+[ ] Repository created
+[ ] .gitignore configured correctly
+[ ] NO .env or td_client.py visible in repo
+[ ] Cache files present in repo
+[ ] momentum_app.py modified for cloud (no TrueData code)
+
+Streamlit Cloud:
+[ ] App deployed successfully
+[ ] App URL accessible
+[ ] All tabs loading correctly
+[ ] "Last updated" timestamp shows
+[ ] No credential-related errors
+
+Security:
+[ ] .env NOT in GitHub repo
+[ ] td_client.py NOT in GitHub repo
+[ ] AWS Security Group configured (RDP from my IP only)
+[ ] No hardcoded credentials anywhere
+
+Testing:
+[ ] Manual price refresh works
+[ ] Automatic Task Scheduler refresh works
+[ ] GitHub receives updates
+[ ] Streamlit Cloud auto-redeploys
+[ ] Users see updated data within 3 minutes
+
+================================================================================
+FREQUENTLY ASKED QUESTIONS
+================================================================================
+
+Q: How much does this cost per month?
+A: ~$19/month for AWS EC2 + storage. GitHub and Streamlit Cloud are free.
+
+Q: Can I stop the VM to save costs?
+A: Yes, but updates will stop. Only stop during weekends (market closed).
+
+Q: What if I forget the VM Administrator password?
+A: Use AWS Console → Get Windows Password with your .pem key.
+
+Q: How do I update the frontend code?
+A: Edit momentum_app.py locally, git push to GitHub, Streamlit auto-redeploys.
+
+Q: How do I change data refresh frequency?
+A: Edit Task Scheduler trigger (change from 30 min to desired interval).
+
+Q: Are my TrueData credentials safe?
+A: Yes. They only exist on AWS VM, never pushed to GitHub or Streamlit Cloud.
+
+Q: Can users see my credentials?
+A: No. Credentials are on AWS VM only. Cloud app cannot access them.
+
+Q: What if TrueData API is down?
+A: Updates fail but app continues showing last cached data. No crash.
+
+Q: How do I add new features to the dashboard?
+A: Edit momentum_app.py locally, test, push to GitHub, auto-deploys.
+
+Q: Can I share this app publicly?
+A: Yes! Streamlit Cloud makes it publicly accessible. No credentials exposed.
+
+================================================================================
+SUPPORT & NEXT STEPS
+================================================================================
+
+If you encounter issues:
+
+1. Check AWS VM is running: EC2 Console
+2. Check Task Scheduler logs: Task Scheduler → History tab
+3. Check GitHub commits: Your repo → Commits
+4. Check Streamlit logs: Streamlit Cloud → Your app → Logs
+
+For help:
+- AWS Support: https://console.aws.amazon.com/support/
+- Streamlit Community: https://discuss.streamlit.io/
+- GitHub Issues: Create issue in your repo
+
+Next enhancements:
+- Add email notifications when updates fail
+- Add monitoring dashboard (AWS CloudWatch)
+- Add cost alerts (AWS Budgets)
+- Add backup automation (AWS Backup)
+
+================================================================================
+END OF IMPLEMENTATION GUIDE
+================================================================================
+
+Congratulations! You now have a production-ready, secure, automated
+momentum dashboard with:
+
+✓ Secure credential management (AWS VM only)
+✓ Automated data updates (every 30 min)
+✓ Public frontend (Streamlit Cloud)
+✓ Version control (GitHub)
+✓ Professional infrastructure (AWS)
+
+Total setup time: 2-4 hours
+Monthly cost: ~$19
+Maintenance: <1 hour/month
+
+Your credentials are NEVER exposed, users see fresh data automatically,
+and you have a reliable, scalable system!
+
+Happy trading!
