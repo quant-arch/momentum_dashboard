@@ -1,0 +1,303 @@
+NiftyBank
+NiftyNext50
+Gold
+NIFTY50
+Gold
+Nifty50
+NiftyCPSE
+NiftyBHARATBond
+S&PBSEBHARAT22index
+NIFTY50
+NiftyInfra
+Nifty50
+GSEC10NSEIndex
+Nifty50
+SENSEX
+Nifty100
+Nifty1Drateindex
+TataNifty50ExchangeTradedFund
+NiftyPrivateBankIndex
+Nifty200Quality30Index
+Nifty10yrBenchmarkG-SecIndex
+Nifty50
+NiftyNext50
+NiftyBank
+NiftyBHARATBondIndex April2031
+NiftyITIndex
+NiftyPrivateBankIndex
+NiftyBank
+NIFTYITIndex
+NYSEFANG+TotalReturnIndex
+NiftyAAABondPlusSDLApr202650:50Index
+NiftyHealthcareIndex
+Nifty5yrBenchmarkG-SecIndex
+NiftyMidcap100Index
+NASDAQ-100Index
+NiftyIndiaConsumptionIndex
+NIFTYIndiaConsumptionIndex
+S&P500Top50TotalReturnIndex
+BSESENSEXIndex
+NiftyHealthcareTRIIndex
+NiftyITTRIIndex
+HangSengTECHTotalReturnIndex
+NiftyBHARATBondIndex-April2032
+NasdaqQ-50TotalReturnIndex
+Nifty200Momentum30TotalReturnIndex
+NiftyMidcap100TRI
+NiftyIndiaDigitalIndex
+NiftyAutoIndex
+NiftyConsumption
+NiftyDivOpps50
+Nifty5yrBenchmarkG-SecIndex
+NiftyIT
+S&PBSEMidcapSelectIndex
+NiftyMidcap150
+Nifty100
+Nifty50Value20
+NIFTYPharmaIndex
+NiftySDLApr2026Top20EqualWeightIndex
+NipponIndiaSilverETF
+MotilalOswalS&PBSEHealthcareETF
+HDFCNIFTYNEXT50ETF
+HDFCNIFTY100ETF
+AdityaBirlaSunLifeNifty200Momentum30ETF
+AdityaBirlaSunLifeNifty200Quality30ETF
+MotilalOswalS&PBSEQualityETF
+MotilalOswalS&PBSEEnhancedValueETF
+HDFCSilverETF
+AxisSilverETF
+HDFCNIFTYGrowthSectors15ETF
+HDFCNIFTY100Quality30ETF
+HDFCNIFTY50Value20ETF
+HDFCNIFTY100LowVolatility30ETF
+HDFCNIFTY200Momentum30ETF
+HDFCNIFTYITETF
+HDFCNIFTYPrivateBankETF
+BHARATBondETF-April2033
+HDFCS&PBSE500ETF
+HDFCNIFTYMidcap150ETF
+HDFCNIFTYSmallcap250ETF
+AdityaBirlaSunLifeCRISILOvernightFundAIIndexETF
+AXISS&PBSESENSEXETF
+NIFTYBankIndex
+Nifty50
+SENSEX
+MiraeAssetNiftyBankETF
+Gold
+MiraeAssetNifty1DRateLiquidETF
+HDFCNifty1DRateLiquidETF
+NiftyFinancialServicesIndex
+Nifty100ESGSectorLeadersTotalReturnIndex
+MiraeAssetGoldETF
+MiraeAssetNifty8-13YrG-SecETF
+MiraeAssetNifty100LowVolatility30ETF
+NiftyIndiaManufacturingTotalReturnIndex
+MiraeAssetMutualFund-MiraeAssetNiftyMidcap150ETF
+NiftyNext50
+Nifty50
+MotilalOswalNifty500ETF
+MiraeAssetS&PBSESensexETF
+MiraeAssetNifty200Alpha30ETF
+MiraeAssetNiftyITETF
+SBINIFTY1DRateETF
+EdelweissGoldETF
+EdelweissSilverETF
+BarodaBNPParibasGoldETF
+NiftyAlphaLow-Volatility30Index
+NiftyAutoIndex
+NiftyBankIndex
+S&PBSE500index
+ICICIPrudentialNiftyCommoditiesETF
+NiftyIndiaConsumptionIndex
+ICICIPrudentialNiftyFinancialServicesEx-BankETF
+NiftyFMCGIndex
+ICICIPrudentialNifty10yrBenchmarkG-SecETF
+Nifty5yrBenchmarkG-SecIndex
+NiftyHealthcareIndex
+ICICIPrudentialNiftyInfrastructureETF
+NIFTYITIndex
+S&PBSELiquidRateIndex.
+Nifty100LowVolatility30Index
+NiftyMidcap150
+NiftyGS813Yr
+ICICIPrudentialNifty200Momentum30ETF
+NiftyNext50
+Nifty100
+Nifty50
+Nifty50Value20
+ICICIPrudentialNiftyPSUBankETF
+NiftyPrivateBankIndex
+ICICIPrudentialNifty200Quality30ETF
+SENSEX
+DomesticPriceofSilver
+TataGoldExchangeTradedFund
+TataSilverExchangeTradedFund
+ZerodhaNifty1DRateLiquidETF
+BajajFinservNiftyBankETF
+BajajFinservNifty50ETF
+HDFCNIFTYPSUBANKETF
+DSPNiftyHealthcareETF
+NIFTY50EqualWeightIndex
+NiftyMidcap150Quality50Index
+DSPNiftyPSUBankETF
+DSPNiftyPrivateBankETF
+DSPS&PBSESensexETF
+DSPSilverETF
+LICMFNiftyMidcap100ETF
+MiraeAssetNiftySmallcap250MomentumQuality100ETF
+ZerodhaGoldETF
+NIFTYAlpha50Index
+NiftyBank
+KotakNiftyIndiaConsumptionETF
+NIFTYITIndex
+KotakNifty1DRateLiquidETF
+KotakNifty100LowVol30ETF
+NiftyMidcap50Index
+KotakNiftyMNCETF
+Nifty50Value20
+MotilalOswalNiftyRealtyETF
+MotilalOswalNiftySmallcap250ETF
+DSPS&PBSELiquidRateETF
+KotakSilverETF
+AdityaBirlaSunLifeNiftyPSEETF
+MiraeAssetNiftyMidSmallcap400MomentumQuality100ETF
+BajajFinservNifty1DRateLiquidETF
+ZerodhaNiftyMidcap150ETF
+ZerodhaNifty100ETF
+Baroda BNP Paribas NIFTY Bank ETF
+SBI SILVER ETF
+SHRIRAM NIFTY 1D RATE LIQUID ETF
+Aditya Birla Sun Life CRISIL Broad Based Gilt ETF
+Nifty EV and New Age Automotive Total Return Index
+Nifty50 Equal Weight
+Nifty Oil & Gas Index
+CRISIL 10 Year Gilt ETF
+Nifty Metal Index
+Groww Nifty EV & New Age Automotive ETF
+Nifty India Defence Total Return Index
+Nifty500 Multicap 50:25:25 Index
+Nifty Top 10 Equal Weight Index
+Edelweiss Nifty Bank ETF
+Nifty 1D Rate Index
+Nifty 500 Momentum 50 Total Return Index
+Nifty PSU Bank Total Return Index
+Nifty Metal Total Return Index
+Nifty India Defence Index- Total Return Inde
+Nifty200 Value 30 Index
+Commodity
+Nifty500 Multicap Momentum Quality 50 Total Return Index
+Nifty 1D Rate Index
+Nifty India New Age Consumption
+Edelweiss BSE Capital Markets & Insurance ETF
+BSE SENSEX Next 30 Index
+Nifty India Railways PSU Index
+Commodity Gold
+MSCI India Index
+Nifty 200 Index- Total Return Index
+Nifty 100 Equal Weight Index
+Nifty Total Market Index
+Nifty Capital Market Total Return Index
+BSE 200 Equal Weight
+Commodity   Gold
+BSE Select IPO Index
+BSE Liquid Rate Index
+Nifty500 Value 50 TRI
+Commodity-Silver
+BSE PSU Bank Index TRI
+Nifty 1D Rate Index
+Nifty Midcap 150 Index
+Commodity-Silver
+Nifty EV & New Age Automotive Index
+Nifty 500 Momentum 50 Index- Total Return Index
+Nifty 50 Equal Weight Total Return Index
+Nifty Next 50 Total Return Index
+Nifty50 Equal Weight
+BSE India Infrastructure Total Return Index
+Commodity-Silver
+Nifty 50 Index
+Nifty India Manufacturing Total Return Index
+Nifty PSE Total Return Index
+Nifty India Tourism Total Return Index
+BSE Sensex Next 30 Index
+Nifty 500 Low Volatility 50 Index   TRI
+Nifty Top 15 Equal Weight Index
+Index
+Nifty Midcap 150 Momentum 50 Total Return Index
+Equity Index
+Nifty Alpha 50 Total Return Index
+Nifty200 Quality 30 Index
+Nifty 50 Index  - TRI
+Liquid
+Domestic Price of Physical Gold
+BSE Power Index - TRI
+Nifty 1D Rate Index
+Domestic Price of Physical Silver
+Nifty 8-13 Yr G-Sec Index
+Index
+Nifty India Manufacturing TRI
+Nifty LargeMidcap 250 TRI
+Domestic price of Gold
+Nifty Smallcap 100 Index
+MiraeAssetSilverETF
+Index
+Nifty 1D Rate Index (Debt Index)
+Nifty500 Flexicap Quality 30 TRI
+Nifty Energy Index
+Nifty 100 Total Return Index
+Nifty 200 Momentum 30 Index
+Nifty Index 50 Index
+Nifty Smallcap 250 Index - TRI
+Gold
+Nifty Energy
+Nifty Smallcap 250
+Nifty Midcap 150 Index - TRI
+Nifty Chemicals Index (TRI)
+BSE Select IPO Total Return Index
+Nifty Total Market Momentum Quality 50 TRI
+Nifty 50 TRI
+BSE Sensex TRI
+Nifty Services Sector Total Return Index
+MSCI India Index
+Nifty Capital Markets Index
+Nifty MNC ETF Total Return Index
+Commodity - Gold
+Commodity - Silver
+DSPNiftyBankETF
+DSPGOLDETF
+DSPNiftyITETF
+Nifty50Index
+Nifty Midcap 150 Index
+Nifty Smallcap 250 Index
+BSE 500 Dividend Leaders
+Nifty Top 20 Equal Weight
+Nifty Metal Index
+NiftyBankIndex
+UTINifty10yrBenchmarkG-SecETF
+UTINifty5yrBenchmarkG-SecETF
+UTINiftyITETF
+UTINiftyMidcap150ExchangeTradedFund(ETF)
+NiftyNext50
+Nifty50
+SENSEX
+UTISilverExchangeTradedFund(UTISilverETF)
+BSESensexNext50
+Commodity
+Nifty Next 50 TRI
+Nifty Next 50 Index
+Nifty Chemicals Index - TRI
+Nifty PSE Index ? TRI
+PhysicalpriceofSilver
+Nifty 500 Healthcare Index
+Nifty?India?Infrastructure?&?Logistics
+BSE India Defence
+MSCI India Index
+Domestic price of Silver
+BSE Top 10 Banks Index
+BSE Hospitals Index
+Nifty Midcap 150 Momentum 50 Index
+BSE Top 10 Banks Index (TRI)
+Nifty PSU Bank Index - TRI
+Commodity
+Nifty 500 Value 50
+Nifty Midcap 150 ETF
+BSE Top 10 Banks Total Return Index

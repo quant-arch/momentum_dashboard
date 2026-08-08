@@ -1,0 +1,500 @@
+symbol,company,industry,score,momentum,positive,negative,band,rank,price
+NATIONALUM,National Aluminium Co. Ltd.,Metals & Mining,97.07,56.26,62.0,36.4,Strong (80-100),1,401.5
+POWERINDIA,Hitachi Energy India Ltd.,Capital Goods,96.65,55.37,59.5,38.0,Strong (80-100),2,34875.0
+ACUTAAS,Acutaas Chemicals Ltd.,Healthcare,97.49,58.22,57.3,42.7,Strong (80-100),3,2725.7
+APARINDS,Apar Industries Ltd.,Capital Goods,98.33,64.1,55.4,43.0,Strong (80-100),4,12801.0
+BHEL,Bharat Heavy Electricals Ltd.,Capital Goods,93.31,46.9,58.7,38.8,Strong (80-100),5,406.45
+BHARATFORG,Bharat Forge Ltd.,Automobile and Auto Components,96.23,53.78,56.3,42.9,Strong (80-100),6,1992.9
+ABB,ABB India Ltd.,Capital Goods,92.47,46.13,57.0,41.3,Strong (80-100),7,7188.0
+MAHABANK,Bank of Maharashtra,Financial Services,95.4,53.7,56.2,42.1,Strong (80-100),8,85.31
+MCX,Multi Commodity Exchange of India Ltd.,Financial Services,98.74,64.23,55.4,43.0,Strong (80-100),9,3042.6
+ATHERENERG,Ather Energy Ltd.,Automobile and Auto Components,94.98,51.58,55.4,43.0,Strong (80-100),10,907.2
+HINDALCO,Hindalco Industries Ltd.,Metals & Mining,84.1,32.15,62.0,36.4,Strong (80-100),11,1055.7
+TORNTPOWER,Torrent Power Ltd.,Power,86.19,34.04,57.0,41.3,Strong (80-100),12,1712.5
+GESHIP,Great Eastern Shipping Co. Ltd.,Services,89.12,39.15,55.4,43.0,Strong (80-100),13,1552.4
+KIRLOSENG,Kirloskar Oil Eng Ltd.,Capital Goods,99.58,77.41,53.8,45.4,Strong (80-100),14,1727.9
+BSE,BSE Ltd.,Financial Services,94.56,50.85,53.7,44.6,Strong (80-100),15,3963.6
+ADANIENSOL,Adani Energy Solutions Ltd.,Power,90.38,40.67,54.7,45.3,Strong (80-100),16,1387.1
+GLENMARK,Glenmark Pharmaceuticals Ltd.,Healthcare,89.54,39.84,53.7,43.8,Strong (80-100),17,2371.6
+GVT&D,GE Vernova T&D India Ltd.,Capital Goods,93.72,50.5,53.7,44.6,Strong (80-100),18,4768.2
+ABSLAMC,Aditya Birla Sun Life AMC Ltd.,Financial Services,85.77,33.98,54.5,43.8,Strong (80-100),19,1088.6
+SAIL,Steel Authority of India Ltd.,Metals & Mining,76.99,26.87,57.0,41.3,Good (60-80),20,187.28
+NATCOPHARM,NATCO Pharma Ltd.,Healthcare,92.89,46.15,53.7,44.6,Strong (80-100),21,1155.2
+FEDERALBNK,Federal Bank Ltd.,Financial Services,75.73,26.62,56.2,42.1,Good (60-80),22,297.05
+VTL,Vardhman Textiles Ltd.,Textiles,80.33,29.34,55.4,43.0,Strong (80-100),23,596.45
+SIEMENS,Siemens Ltd.,Capital Goods,74.06,24.97,57.1,42.0,Good (60-80),24,3871.5
+GRAPHITE,Graphite India Ltd.,Capital Goods,87.03,35.04,53.7,44.6,Strong (80-100),25,728.55
+GRANULES,Granules India Ltd.,Healthcare,83.68,32.0,53.8,44.5,Strong (80-100),26,743.5
+NAVINFLUOR,Navin Fluorine International Ltd.,Chemicals,71.97,23.96,56.3,42.9,Good (60-80),27,7085.0
+NTPC,NTPC Ltd.,Power,76.15,26.64,52.9,42.1,Good (60-80),28,400.35
+TMCV,Tata Motors Ltd.,Capital Goods,70.29,22.77,55.5,42.9,Good (60-80),29,434.05
+CUMMINSIND,Cummins India Ltd.,Capital Goods,67.78,21.74,56.2,42.1,Good (60-80),30,5403.0
+IPCALAB,Ipca Laboratories Ltd.,Healthcare,83.26,31.96,53.8,45.4,Strong (80-100),31,1560.1
+DATAPATTNS,Data Patterns (India) Ltd.,Capital Goods,99.16,68.26,51.2,47.1,Strong (80-100),32,4250.1
+NETWEB,Netweb Technologies India Ltd.,Information Technology,84.94,33.41,52.9,45.5,Strong (80-100),33,4302.7
+ADANIGREEN,Adani Green Energy Ltd.,Power,82.43,31.15,52.9,45.5,Strong (80-100),34,1365.0
+HSCL,Himadri Speciality Chemical Ltd.,Chemicals,91.63,43.6,52.1,46.3,Strong (80-100),35,614.9
+LUPIN,Lupin Ltd.,Healthcare,77.82,27.03,53.7,44.6,Good (60-80),36,2460.1
+ANURAS,Anupam Rasayan India Ltd.,Chemicals,68.2,21.9,54.6,43.7,Good (60-80),37,1367.0
+ASHOKLEY,Ashok Leyland Ltd.,Capital Goods,68.62,22.04,54.5,43.8,Good (60-80),38,170.78
+ENGINERSIN,Engineers India Ltd.,Construction,79.92,29.3,52.9,45.5,Good (60-80),39,261.35
+PIRAMALFIN,Piramal Finance Ltd.,Financial Services,91.21,42.43,52.2,47.0,Strong (80-100),40,1915.6
+J&KBANK,Jammu & Kashmir Bank Ltd.,Financial Services,79.08,28.81,52.9,45.5,Good (60-80),41,139.63
+ADANIPOWER,Adani Power Ltd.,Power,92.05,44.35,51.2,47.1,Strong (80-100),42,230.19
+BANDHANBNK,Bandhan Bank Ltd.,Financial Services,90.79,40.84,51.2,46.3,Strong (80-100),43,207.63
+BAJAJ-AUTO,Bajaj Auto Ltd.,Automobile and Auto Components,64.44,19.98,54.5,43.8,Good (60-80),44,10605.0
+SCI,Shipping Corporation of India Ltd.,Services,86.61,34.92,52.1,46.3,Strong (80-100),45,319.6
+HINDZINC,Hindustan Zinc Ltd.,Metals & Mining,74.48,25.29,52.9,45.5,Good (60-80),46,636.55
+SHRIRAMFIN,Shriram Finance Ltd.,Financial Services,78.24,27.25,52.1,45.5,Good (60-80),47,1015.65
+COALINDIA,Coal India Ltd.,Oil Gas & Consumable Fuels,79.5,29.0,52.1,46.3,Good (60-80),48,466.65
+EMMVEE,Emmvee Photovoltaic Power Ltd.,Capital Goods,77.41,26.99,52.2,46.1,Good (60-80),49,264.9
+POLYCAB,Polycab India Ltd.,Capital Goods,61.51,17.67,54.5,43.8,Good (60-80),50,9003.0
+SYRMA,Syrma SGS Technology Ltd.,Capital Goods,89.96,40.37,51.2,47.1,Strong (80-100),51,1093.4
+ELGIEQUIP,Elgi Equipments Ltd.,Capital Goods,64.85,20.01,53.7,44.6,Good (60-80),52,562.35
+JINDALSTEL,Jindal Steel Ltd.,Metals & Mining,53.56,14.25,55.4,43.0,Average (40-60),53,1258.2
+ATUL,Atul Ltd.,Chemicals,82.01,30.83,51.2,47.1,Strong (80-100),54,7033.5
+RRKABEL,R R Kabel Ltd.,Capital Goods,59.0,15.96,54.7,45.3,Average (40-60),55,1927.0
+AIAENG,AIA Engineering Ltd.,Capital Goods,57.74,15.76,54.7,45.3,Average (40-60),56,4005.5
+GROWW,Billionbrains Garage Ventures Ltd.,Financial Services,87.45,35.28,50.4,47.9,Strong (80-100),57,208.03
+HINDCOPPER,Hindustan Copper Ltd.,Metals & Mining,97.91,62.65,49.6,48.8,Strong (80-100),58,568.6
+CPPLUS,Aditya Infotech Ltd.,Capital Goods,94.14,50.55,49.6,48.8,Strong (80-100),59,2463.1
+THERMAX,Thermax Ltd.,Capital Goods,82.85,31.17,51.3,47.9,Strong (80-100),60,4182.3
+TATASTEEL,Tata Steel Ltd.,Metals & Mining,64.02,19.9,52.9,45.5,Good (60-80),61,217.09
+KARURVYSYA,Karur Vysya Bank Ltd.,Financial Services,76.57,26.64,51.2,47.1,Good (60-80),62,313.55
+NMDC,NMDC Ltd.,Metals & Mining,61.92,18.02,52.9,45.5,Good (60-80),63,90.14
+ONGC,Oil & Natural Gas Corporation Ltd.,Oil Gas & Consumable Fuels,70.71,23.3,52.1,46.3,Good (60-80),64,283.9
+GALLANTT,Gallantt Ispat Ltd.,Capital Goods,81.17,29.93,51.3,47.9,Strong (80-100),65,866.5
+UNIONBANK,Union Bank of India,Financial Services,46.86,11.34,54.5,43.8,Average (40-60),66,167.28
+DELHIVERY,Delhivery Ltd.,Services,40.17,9.04,55.4,43.0,Average (40-60),67,481.75
+ANANDRATHI,Anand Rathi Wealth Ltd.,Financial Services,42.68,9.67,55.6,44.4,Average (40-60),68,3614.2
+TORNTPHARM,Torrent Pharmaceuticals Ltd.,Healthcare,58.58,15.91,52.9,45.5,Average (40-60),69,4362.7
+JSL,Jindal Stainless Ltd.,Metals & Mining,39.75,8.96,55.4,43.0,Weak (0-40),70,766.6
+FINCABLES,Finolex Cables Ltd.,Capital Goods,69.46,22.36,51.2,47.1,Good (60-80),71,1087.9
+KEI,KEI Industries Ltd.,Capital Goods,62.76,18.85,52.1,46.3,Good (60-80),72,5110.2
+TENNIND,Tenneco Clean Air India Ltd.,Automobile and Auto Components,81.59,30.61,50.0,49.1,Strong (80-100),73,649.15
+AUROPHARMA,Aurobindo Pharma Ltd.,Healthcare,80.75,29.44,50.4,48.7,Strong (80-100),74,1478.7
+NAVA,Nava Ltd.,Power,85.36,33.8,49.6,48.8,Strong (80-100),75,715.8
+PFC,Power Finance Corporation Ltd.,Financial Services,60.25,17.26,52.1,46.3,Good (60-80),76,457.55
+POWERGRID,Power Grid Corporation of India Ltd.,Power,51.46,13.39,52.9,45.5,Average (40-60),77,313.8
+ZENTEC,Zen Technologies Ltd.,Capital Goods,69.87,22.44,51.2,47.1,Good (60-80),78,1621.6
+AJANTPHARM,Ajanta Pharmaceuticals Ltd.,Healthcare,54.39,14.99,52.1,46.2,Average (40-60),79,3078.4
+HEG,H.E.G. Ltd.,Capital Goods,56.07,15.39,52.1,46.3,Average (40-60),80,594.15
+SONACOMS,Sona BLW Precision Forgings Ltd.,Automobile and Auto Components,65.69,20.68,51.2,47.1,Good (60-80),81,578.65
+ICICIAMC,ICICI Prudential Asset Management Company Ltd.,Financial Services,75.31,26.28,50.0,47.8,Good (60-80),82,3301.7
+MOTHERSON,Samvardhana Motherson International Ltd.,Automobile and Auto Components,73.64,24.82,50.4,47.9,Good (60-80),83,130.43
+NESTLEIND,Nestle India Ltd.,Fast Moving Consumer Goods,63.6,19.58,51.2,47.1,Good (60-80),84,1476.0
+ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,Services,59.41,16.98,51.2,47.1,Average (40-60),85,1732.8
+MARICO,Marico Ltd.,Fast Moving Consumer Goods,55.23,15.18,52.1,46.3,Average (40-60),86,832.15
+HFCL,HFCL Ltd.,Telecommunication,100.0,87.45,47.1,51.2,Strong (80-100),87,146.24
+LAURUSLABS,Laurus Labs Ltd.,Healthcare,61.09,17.66,51.2,47.1,Good (60-80),88,1205.3
+VIJAYA,Vijaya Diagnostic Centre Ltd.,Healthcare,48.95,11.95,53.0,47.0,Average (40-60),89,1208.1
+AMBER,Amber Enterprises India Ltd.,Consumer Durables,67.36,21.58,50.4,47.9,Good (60-80),90,8842.5
+LINDEINDIA,Linde India Ltd.,Chemicals,87.87,37.32,48.7,50.4,Strong (80-100),91,7847.5
+JINDALSAW,Jindal Saw Ltd.,Capital Goods,88.28,37.42,47.9,50.4,Strong (80-100),92,242.46
+SOLARINDS,Solar Industries India Ltd.,Chemicals,46.44,11.14,52.9,46.2,Average (40-60),93,15887.0
+ASTERDM,Aster DM Healthcare Ltd.,Healthcare,35.15,7.6,53.7,44.6,Weak (0-40),94,738.55
+INDIACEM,India Cements Ltd.,Construction Materials,36.4,8.02,53.7,44.6,Weak (0-40),95,411.3
+SUNPHARMA,Sun Pharmaceutical Industries Ltd.,Healthcare,38.49,8.73,53.7,44.6,Weak (0-40),96,1834.4
+JAINREC,Jain Resource Recycling Ltd.,Metals & Mining,71.13,23.44,50.4,49.6,Good (60-80),97,504.2
+JBCHEPHARM,J.B. Chemicals & Pharmaceuticals Ltd.,Healthcare,66.11,21.46,50.4,47.9,Good (60-80),98,2143.2
+AXISBANK,Axis Bank Ltd.,Financial Services,39.33,8.86,52.9,45.5,Weak (0-40),99,1292.7
+WELCORP,Welspun Corp Ltd.,Capital Goods,88.7,37.92,47.9,50.4,Strong (80-100),100,1299.2
+BELRISE,Belrise Industries Ltd.,Automobile and Auto Components,95.82,53.78,46.3,52.1,Strong (80-100),101,227.94
+JSWSTEEL,JSW Steel Ltd.,Metals & Mining,31.38,6.89,53.7,44.6,Weak (0-40),102,1283.4
+DRREDDY,Dr. Reddy's Laboratories Ltd.,Healthcare,60.67,17.39,50.4,47.9,Good (60-80),103,1307.6
+M&MFIN,Mahindra & Mahindra Financial Services Ltd.,Financial Services,51.05,13.27,51.2,47.1,Average (40-60),104,328.45
+URBANCO,Urban Company Ltd.,Consumer Services,53.14,14.03,51.2,47.1,Average (40-60),105,146.62
+PNBHOUSING,PNB Housing Finance Ltd.,Financial Services,50.63,12.78,51.2,47.1,Average (40-60),106,1051.6
+HONASA,Honasa Consumer Ltd.,Fast Moving Consumer Goods,84.52,32.9,47.1,50.4,Strong (80-100),107,354.6
+INDUSINDBK,IndusInd Bank Ltd.,Financial Services,47.7,11.55,51.2,47.1,Average (40-60),108,946.95
+SBIN,State Bank of India,Financial Services,59.83,17.23,50.4,47.9,Average (40-60),109,1092.0
+ANGELONE,Angel One Ltd.,Financial Services,74.9,25.87,47.9,50.4,Good (60-80),110,322.6
+MANAPPURAM,Manappuram Finance Ltd.,Financial Services,51.88,13.67,50.4,47.1,Average (40-60),111,316.3
+TIMKEN,Timken India Ltd.,Capital Goods,41.42,9.22,52.1,47.1,Average (40-60),112,3460.1
+NAM-INDIA,Nippon Life India Asset Management Ltd.,Financial Services,72.38,24.02,47.9,50.4,Good (60-80),113,1107.4
+MUTHOOTFIN,Muthoot Finance Ltd.,Financial Services,34.73,7.59,52.1,46.3,Weak (0-40),114,3584.3
+TECHM,Tech Mahindra Ltd.,Information Technology,13.39,2.27,53.7,43.0,Weak (0-40),115,1448.2
+FORCEMOT,Force Motors Ltd.,Automobile and Auto Components,30.96,6.87,52.1,46.3,Weak (0-40),116,20702.0
+CREDITACC,CreditAccess Grameen Ltd.,Financial Services,55.65,15.22,49.6,48.8,Average (40-60),117,1490.4
+CESC,CESC Ltd.,Power,52.3,13.68,49.6,47.9,Average (40-60),118,186.61
+EMCURE,Emcure Pharmaceuticals Ltd.,Healthcare,52.72,13.75,50.4,49.6,Average (40-60),119,1664.8
+AARTIIND,Aarti Industries Ltd.,Chemicals,73.22,24.2,47.1,51.2,Good (60-80),120,488.15
+NYKAA,FSN E-Commerce Ventures Ltd.,Consumer Services,23.01,4.47,52.9,45.5,Weak (0-40),121,269.85
+EICHERMOT,Eicher Motors Ltd.,Automobile and Auto Components,27.62,5.86,52.1,46.3,Weak (0-40),122,7327.5
+PETRONET,Petronet LNG Ltd.,Oil Gas & Consumable Fuels,16.74,3.57,53.7,44.6,Weak (0-40),123,282.1
+NLCINDIA,NLC India Ltd.,Power,78.66,28.3,46.3,52.1,Good (60-80),124,328.7
+CANHLIFE,Canara HSBC Life Insurance Company Ltd.,Financial Services,53.97,14.42,49.6,49.6,Average (40-60),125,142.63
+SAILIFE,Sai Life Sciences Ltd.,Healthcare,66.53,21.49,47.9,50.4,Good (60-80),126,1089.7
+APLAPOLLO,APL Apollo Tubes Ltd.,Capital Goods,23.43,4.63,52.1,46.3,Weak (0-40),127,1973.7
+JUBLINGREA,Jubilant Ingrevia Ltd.,Chemicals,56.9,15.6,48.8,49.6,Average (40-60),128,756.85
+HAL,Hindustan Aeronautics Ltd.,Capital Goods,5.02,0.88,54.5,43.8,Weak (0-40),129,4782.1
+SCHAEFFLER,Schaeffler India Ltd.,Automobile and Auto Components,18.41,3.74,52.9,45.5,Weak (0-40),130,4247.3
+CRAFTSMAN,Craftsman Automation Ltd.,Automobile and Auto Components,43.93,9.98,50.4,48.7,Average (40-60),131,8637.0
+OFSS,Oracle Financial Services Software Ltd.,Information Technology,62.34,18.05,47.9,50.4,Good (60-80),132,9498.5
+ACMESOLAR,ACME Solar Holdings Ltd.,Power,66.95,21.53,47.1,51.2,Good (60-80),133,298.55
+GMDCLTD,Gujarat Mineral Development Corporation Ltd.,Metals & Mining,57.32,15.65,47.9,49.6,Average (40-60),134,703.7
+CANFINHOME,Can Fin Homes Ltd.,Financial Services,4.18,0.69,53.7,43.8,Weak (0-40),135,886.3
+VOLTAS,Voltas Ltd.,Consumer Durables,33.47,7.44,51.2,47.1,Weak (0-40),136,1363.9
+ULTRACEMCO,UltraTech Cement Ltd.,Construction Materials,25.1,4.88,52.1,46.3,Weak (0-40),137,12146.0
+ABCAPITAL,Aditya Birla Capital Ltd.,Financial Services,44.35,10.24,49.6,48.8,Average (40-60),138,369.0
+IDEA,Vodafone Idea Ltd.,Telecommunication,56.49,15.47,47.9,49.6,Average (40-60),139,11.23
+AUBANK,AU Small Finance Bank Ltd.,Financial Services,47.28,11.49,48.8,49.6,Average (40-60),140,1032.4
+TATAPOWER,Tata Power Co. Ltd.,Power,54.81,15.09,47.9,49.6,Average (40-60),141,439.25
+GRASIM,Grasim Industries Ltd.,Construction Materials,35.56,7.72,50.4,47.9,Weak (0-40),142,2960.6
+BANKINDIA,Bank of India,Financial Services,2.93,0.53,53.7,44.6,Weak (0-40),143,140.37
+SARDAEN,Sarda Energy and Minerals Ltd.,Metals & Mining,37.24,8.16,50.4,47.9,Weak (0-40),144,593.95
+TITAN,Titan Company Ltd.,Consumer Durables,50.21,12.67,48.8,49.6,Average (40-60),145,4307.5
+LENSKART,Lenskart Solutions Ltd.,Consumer Services,72.8,24.15,45.5,52.1,Good (60-80),146,487.75
+CUB,City Union Bank Ltd.,Financial Services,45.61,11.03,48.8,49.6,Average (40-60),147,270.85
+SUNTV,Sun TV Network Ltd.,Media Entertainment & Publication,30.13,6.65,50.4,47.1,Weak (0-40),148,571.1
+GODREJIND,Godrej Industries Ltd.,Diversified,14.64,2.82,52.1,46.3,Weak (0-40),149,1226.85
+LICHSGFIN,LIC Housing Finance Ltd.,Financial Services,30.54,6.84,49.6,47.1,Weak (0-40),150,586.35
+CCL,CCL Products (I) Ltd.,Fast Moving Consumer Goods,58.16,15.84,47.1,51.2,Average (40-60),151,1207.8
+LLOYDSME,Lloyds Metals And Energy Ltd.,Metals & Mining,71.55,23.58,44.6,53.7,Good (60-80),152,1726.7
+GPIL,Godawari Power & Ispat Ltd.,Capital Goods,45.19,10.57,47.9,49.6,Average (40-60),153,304.35
+TATACONSUM,Tata Consumer Products Ltd.,Fast Moving Consumer Goods,20.5,4.14,51.2,47.1,Weak (0-40),154,1151.7
+BIOCON,Biocon Ltd.,Healthcare,5.44,0.96,52.1,45.5,Weak (0-40),155,382.25
+JSWENERGY,JSW Energy Ltd.,Power,26.78,5.8,50.4,47.9,Weak (0-40),156,575.9
+TRITURBINE,Triveni Turbine Ltd.,Capital Goods,49.79,12.37,47.9,50.4,Average (40-60),157,574.1
+BALRAMCHIN,Balrampur Chini Mills Ltd.,Fast Moving Consumer Goods,65.27,20.29,45.5,52.9,Good (60-80),158,525.5
+RADICO,Radico Khaitan Ltd,Fast Moving Consumer Goods,35.98,7.97,49.6,49.6,Weak (0-40),159,3407.0
+GRAVITA,Gravita India Ltd.,Metals & Mining,36.82,8.04,48.8,49.6,Weak (0-40),160,1798.9
+SPLPETRO,Supreme Petrochem Ltd.,Chemicals,69.04,22.28,43.7,55.5,Good (60-80),161,741.0
+MEESHO,Meesho Ltd.,Consumer Services,63.18,18.89,44.4,53.5,Good (60-80),162,198.79
+MFSL,Max Financial Services Ltd.,Financial Services,20.08,4.14,50.4,47.9,Weak (0-40),163,1707.4
+OIL,Oil India Ltd.,Oil Gas & Consumable Fuels,48.12,11.69,47.1,51.2,Average (40-60),164,452.85
+LTFOODS,LT Foods Ltd.,Fast Moving Consumer Goods,42.26,9.29,48.7,51.3,Average (40-60),165,432.2
+MMTC,MMTC Ltd.,Services,37.66,8.4,47.9,50.4,Weak (0-40),166,66.82
+NTPCGREEN,NTPC Green Energy Ltd.,Power,38.08,8.4,47.9,50.4,Weak (0-40),167,109.26
+VBL,Varun Beverages Ltd.,Fast Moving Consumer Goods,32.64,7.18,48.8,49.6,Weak (0-40),168,510.6
+FLUOROCHEM,Gujarat Fluorochemicals Ltd.,Chemicals,27.2,5.82,48.8,49.6,Weak (0-40),169,3798.4
+IFCI,IFCI Ltd.,Financial Services,46.03,11.03,46.3,51.2,Average (40-60),170,63.88
+ANTHEM,Anthem Biosciences Ltd.,Healthcare,44.77,10.53,46.3,52.1,Average (40-60),171,779.45
+RBLBANK,RBL Bank Ltd.,Financial Services,33.05,7.3,47.9,50.4,Weak (0-40),172,345.75
+FACT,Fertilisers and Chemicals Travancore Ltd.,Chemicals,43.51,9.92,46.3,52.1,Average (40-60),173,917.05
+LTF,L&T Finance Ltd.,Financial Services,28.03,5.9,47.9,50.4,Weak (0-40),174,303.65
+WAAREEENER,Waaree Energies Ltd.,Capital Goods,2.09,0.35,51.2,47.1,Weak (0-40),175,3226.6
+ADANIENT,Adani Enterprises Ltd.,Metals & Mining,34.31,7.45,47.1,51.2,Weak (0-40),176,2513.7
+TRAVELFOOD,Travel Food Services Ltd.,Consumer Services,0.42,0.04,51.2,47.1,Weak (0-40),177,1250.2
+ZYDUSLIFE,Zydus Lifesciences Ltd.,Healthcare,15.06,2.93,49.6,48.8,Weak (0-40),178,940.3
+BEL,Bharat Electronics Ltd.,Capital Goods,3.77,0.62,49.6,47.1,Weak (0-40),179,439.45
+ALKEM,Alkem Laboratories Ltd.,Healthcare,15.48,3.05,49.6,49.6,Weak (0-40),180,5590.5
+AADHARHFC,Aadhar Housing Finance Ltd.,Financial Services,21.76,4.37,47.9,49.6,Weak (0-40),181,500.45
+ZYDUSWELL,Zydus Wellness Ltd.,Fast Moving Consumer Goods,40.59,9.08,46.3,52.1,Average (40-60),182,503.75
+LGEINDIA,LG Electronics India Ltd.,Consumer Durables,11.72,2.09,49.6,48.8,Weak (0-40),183,1542.6
+PHOENIXLTD,Phoenix Mills Ltd.,Realty,9.21,1.85,50.4,49.6,Weak (0-40),184,1829.5
+BLUESTARCO,Blue Star Ltd.,Consumer Durables,2.51,0.38,50.4,47.9,Weak (0-40),185,1748.6
+LT,Larsen & Toubro Ltd.,Construction,17.99,3.67,48.8,49.6,Weak (0-40),186,4023.0
+APOLLOHOSP,Apollo Hospitals Enterprise Ltd.,Healthcare,29.71,6.32,47.1,51.2,Weak (0-40),187,7837.0
+ONESOURCE,Onesource Specialty Pharma Ltd.,Healthcare,23.85,4.68,47.9,50.4,Weak (0-40),188,1815.9
+RKFORGE,Ramkrishna Forgings Ltd.,Automobile and Auto Components,48.54,11.72,43.8,54.5,Average (40-60),189,621.0
+CARBORUNIV,Carborundum Universal Ltd.,Capital Goods,43.1,9.87,45.4,53.8,Average (40-60),190,1003.4
+PIDILITIND,Pidilite Industries Ltd.,Chemicals,10.88,2.0,48.8,47.9,Weak (0-40),191,1450.4
+CGPOWER,CG Power and Industrial Solutions Ltd.,Capital Goods,49.37,12.1,43.0,55.4,Average (40-60),192,859.1
+360ONE,360 ONE WAM Ltd.,Financial Services,41.0,9.13,45.4,53.8,Average (40-60),193,1111.7
+GMRAIRPORT,GMR Airports Ltd.,Services,17.15,3.6,47.9,49.6,Weak (0-40),194,100.66
+GICRE,General Insurance Corporation of India,Financial Services,28.45,6.19,47.1,51.2,Weak (0-40),195,399.35
+INDIANB,Indian Bank,Financial Services,12.13,2.18,48.8,49.6,Weak (0-40),196,860.75
+DMART,Avenue Supermarts Ltd.,Consumer Services,25.94,5.44,47.1,51.2,Weak (0-40),197,4386.5
+CAMS,Computer Age Management Services Ltd.,Financial Services,41.84,9.29,43.8,53.7,Average (40-60),198,835.9
+MANKIND,Mankind Pharma Ltd.,Healthcare,29.29,6.24,47.1,52.1,Weak (0-40),199,2375.2
+IRB,IRB Infrastructure Developers Ltd.,Construction,33.89,7.45,44.6,51.2,Weak (0-40),200,21.67
+GAIL,GAIL (India) Ltd.,Oil Gas & Consumable Fuels,1.26,0.25,49.6,48.8,Weak (0-40),201,167.26
+INDUSTOWER,Indus Towers Ltd.,Telecommunication,7.11,1.23,48.8,49.6,Weak (0-40),202,402.9
+GRSE,Garden Reach Shipbuilders & Engineers Ltd.,Capital Goods,38.91,8.82,43.8,54.5,Weak (0-40),203,3093.8
+TVSMOTOR,TVS Motor Company Ltd.,Automobile and Auto Components,7.95,1.26,48.8,49.6,Weak (0-40),204,3706.7
+SHYAMMETL,Shyam Metalics and Energy Ltd.,Capital Goods,26.36,5.57,46.3,52.1,Weak (0-40),205,884.05
+ELECON,Elecon Engineering Co. Ltd.,Capital Goods,31.8,7.0,44.6,52.9,Weak (0-40),206,562.65
+GLAXO,Glaxosmithkline Pharmaceuticals Ltd.,Healthcare,3.35,0.61,48.8,49.6,Weak (0-40),207,2481.3
+BDL,Bharat Dynamics Ltd.,Capital Goods,1.67,0.33,48.8,49.6,Weak (0-40),208,1466.9
+COCHINSHIP,Cochin Shipyard Ltd.,Capital Goods,22.18,4.44,46.3,51.2,Weak (0-40),209,1814.7
+KIMS,Krishna Institute of Medical Sciences Ltd.,Healthcare,19.67,3.9,47.1,51.2,Weak (0-40),210,706.85
+WOCKPHARMA,Wockhardt Ltd.,Healthcare,19.25,3.88,47.1,51.2,Weak (0-40),211,1637.5
+JPPOWER,Jaiprakash Power Ventures Ltd.,Power,28.87,6.21,44.6,53.7,Weak (0-40),212,19.39
+CHENNPETRO,Chennai Petroleum Corporation Ltd.,Oil Gas & Consumable Fuels,25.52,5.16,45.5,52.9,Weak (0-40),213,1076.2
+NUVAMA,Nuvama Wealth Management Ltd.,Financial Services,22.59,4.45,47.0,53.0,Weak (0-40),214,1474.5
+CONCOR,Container Corporation of India Ltd.,Services,8.37,1.29,47.1,49.6,Weak (0-40),215,526.7
+KPIL,Kalpataru Projects International Ltd.,Construction,13.81,2.65,47.0,51.3,Weak (0-40),216,1297.9
+TATACAP,Tata Capital Ltd.,Financial Services,32.22,7.0,40.5,57.9,Weak (0-40),217,325.8
+NHPC,NHPC Ltd.,Power,5.86,0.98,47.1,49.6,Weak (0-40),218,81.58
+BAYERCROP,Bayer Cropscience Ltd.,Chemicals,24.27,4.83,43.8,54.5,Weak (0-40),219,4636.9
+RAILTEL,Railtel Corporation Of India Ltd.,Telecommunication,24.69,4.85,43.0,54.5,Weak (0-40),220,348.25
+TITAGARH,Titagarh Rail Systems Ltd.,Capital Goods,17.57,3.61,45.5,52.9,Weak (0-40),221,844.3
+IGIL,International Gemological Institute Ltd.,Services,7.53,1.24,47.8,52.2,Weak (0-40),222,364.15
+GODFRYPHLP,Godfrey Phillips India Ltd.,Fast Moving Consumer Goods,9.62,1.85,46.3,52.1,Weak (0-40),223,2340.4
+NIVABUPA,Niva Bupa Health Insurance Company Ltd.,Financial Services,11.3,2.02,46.2,52.1,Weak (0-40),224,80.04
+DEEPAKNTR,Deepak Nitrite Ltd.,Chemicals,12.55,2.2,46.2,52.9,Weak (0-40),225,1854.4
+YESBANK,Yes Bank Ltd.,Financial Services,8.79,1.54,46.3,52.1,Weak (0-40),226,22.51
+RVNL,Rail Vikas Nigam Ltd.,Construction,21.34,4.29,43.0,55.4,Weak (0-40),227,308.7
+KPRMILL,K.P.R. Mill Ltd.,Textiles,20.92,4.2,42.1,55.4,Weak (0-40),228,978.0
+USHAMART,Usha Martin Ltd.,Capital Goods,6.69,1.18,46.3,52.1,Weak (0-40),229,477.4
+STARHEALTH,Star Health and Allied Insurance Company Ltd.,Financial Services,15.9,3.14,43.8,53.7,Weak (0-40),230,517.45
+IRCON,IRCON International Ltd.,Construction,16.32,3.34,43.8,54.5,Weak (0-40),231,161.35
+ZEEL,Zee Entertainment Enterprises Ltd.,Media Entertainment & Publication,0.0,0.03,47.1,51.2,Weak (0-40),232,94.58
+ATGL,Adani Total Gas Ltd.,Oil Gas & Consumable Fuels,18.83,3.86,39.7,58.7,Weak (0-40),233,644.25
+DIVISLAB,Divi's Laboratories Ltd.,Healthcare,6.28,1.15,45.4,52.1,Weak (0-40),234,6702.5
+ZFCVINDIA,ZF Commercial Vehicle Control Systems India Ltd.,Automobile and Auto Components,10.04,1.91,44.6,53.7,Weak (0-40),235,14544.0
+CROMPTON,Crompton Greaves Consumer Electricals Ltd.,Consumer Durables,10.46,1.98,43.8,54.5,Weak (0-40),236,290.75
+DEEPAKFERT,Deepak Fertilisers & Petrochemicals Corp. Ltd.,Chemicals,12.97,2.26,43.0,55.4,Weak (0-40),237,1338.4
+NH,Narayana Hrudayalaya Ltd.,Healthcare,14.23,2.81,42.1,56.2,Weak (0-40),238,1856.2
+JKCEMENT,J.K. Cement Ltd.,Construction Materials,4.6,0.86,44.6,53.7,Weak (0-40),239,5626.0
+ENRIN,Siemens Energy India Ltd.,Capital Goods,0.84,0.16,45.2,54.8,Weak (0-40),240,3139.5
+3MINDIA,3M India Ltd.,Diversified,0.0,-3.09,42.7,56.4,Weak Momentum (<=0),N/A,32650.0
+ACC,ACC Ltd.,Construction Materials,0.0,-25.8,39.7,58.7,Weak Momentum (<=0),N/A,1414.6
+AWL,AWL Agri Business Ltd.,Fast Moving Consumer Goods,0.0,-19.2,35.5,62.0,Weak Momentum (<=0),N/A,211.94
+AAVAS,Aavas Financiers Ltd.,Financial Services,0.0,-12.66,39.7,57.9,Weak Momentum (<=0),N/A,1419.6
+ABBOTINDIA,Abbott India Ltd.,Healthcare,0.0,-9.13,38.8,57.0,Weak Momentum (<=0),N/A,26700.0
+ACE,Action Construction Equipment Ltd.,Capital Goods,0.0,-16.98,46.3,52.1,Weak Momentum (<=0),N/A,905.55
+ABFRL,Aditya Birla Fashion and Retail Ltd.,Consumer Services,0.0,-14.83,42.1,56.2,Weak Momentum (<=0),N/A,67.79
+ABLBL,Aditya Birla Lifestyle Brands Ltd.,Consumer Services,0.0,-23.16,41.7,58.3,Weak Momentum (<=0),N/A,118.21
+ABREL,Aditya Birla Real Estate Ltd.,Realty,0.0,-3.12,43.8,54.5,Weak Momentum (<=0),N/A,1591.2
+AEGISLOG,Aegis Logistics Ltd.,Oil Gas & Consumable Fuels,0.0,-4.49,41.0,59.0,Weak Momentum (<=0),N/A,739.65
+AEGISVOPAK,Aegis Vopak Terminals Ltd.,Oil Gas & Consumable Fuels,0.0,-23.57,44.6,53.7,Weak Momentum (<=0),N/A,216.12
+AFCONS,Afcons Infrastructure Ltd.,Construction,0.0,-26.45,42.1,56.2,Weak Momentum (<=0),N/A,336.85
+AFFLE,Affle 3i Ltd.,Information Technology,0.0,-16.17,42.1,55.4,Weak Momentum (<=0),N/A,1488.7
+ABDL,Allied Blenders and Distillers Ltd.,Fast Moving Consumer Goods,0.0,-13.15,42.9,56.3,Weak Momentum (<=0),N/A,572.0
+ARE&M,Amara Raja Energy & Mobility Ltd.,Automobile and Auto Components,0.0,-11.09,46.2,53.0,Weak Momentum (<=0),N/A,897.4
+AMBUJACEM,Ambuja Cements Ltd.,Construction Materials,0.0,-20.65,49.6,48.8,Weak Momentum (<=0),N/A,450.65
+ANANTRAJ,Anant Raj Ltd.,Realty,0.0,-24.85,45.5,52.1,Weak Momentum (<=0),N/A,555.9
+APOLLOTYRE,Apollo Tyres Ltd.,Automobile and Auto Components,0.0,-16.91,41.3,57.0,Weak Momentum (<=0),N/A,410.05
+APTUS,Aptus Value Housing Finance India Ltd.,Financial Services,0.0,-5.87,39.7,58.7,Weak Momentum (<=0),N/A,275.05
+ASAHIINDIA,Asahi India Glass Ltd.,Automobile and Auto Components,0.0,-10.6,43.0,55.4,Weak Momentum (<=0),N/A,845.45
+ASIANPAINT,Asian Paints Ltd.,Consumer Durables,0.0,-2.29,47.9,50.4,Weak Momentum (<=0),N/A,2530.6
+ASTRAL,Astral Ltd.,Capital Goods,0.0,-0.81,47.1,51.2,Weak Momentum (<=0),N/A,1569.1
+AIIL,Authum Investment & Infrastructure Ltd.,Financial Services,0.0,-7.77,45.3,54.7,Weak Momentum (<=0),N/A,490.05
+BEML,BEML Ltd.,Capital Goods,0.0,-1.37,49.6,48.8,Weak Momentum (<=0),N/A,2000.2
+BLS,BLS International Services Ltd.,Consumer Services,0.0,-8.52,39.7,57.9,Weak Momentum (<=0),N/A,291.9
+BAJFINANCE,Bajaj Finance Ltd.,Financial Services,0.0,-5.1,47.9,49.6,Weak Momentum (<=0),N/A,972.75
+BAJAJFINSV,Bajaj Finserv Ltd.,Financial Services,0.0,-14.52,48.7,48.7,Weak Momentum (<=0),N/A,1824.5
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd.,Financial Services,0.0,-17.11,48.7,49.6,Weak Momentum (<=0),N/A,10597.0
+BAJAJHFL,Bajaj Housing Finance Ltd.,Financial Services,0.0,-21.55,37.2,60.3,Weak Momentum (<=0),N/A,87.97
+BALKRISIND,Balkrishna Industries Ltd.,Automobile and Auto Components,0.0,-4.54,40.3,58.8,Weak Momentum (<=0),N/A,2258.4
+BANKBARODA,Bank of Baroda,Financial Services,0.0,-1.89,49.6,48.8,Weak Momentum (<=0),N/A,270.35
+BATAINDIA,Bata India Ltd.,Consumer Durables,0.0,-29.97,39.7,58.7,Weak Momentum (<=0),N/A,728.15
+BERGEPAINT,Berger Paints India Ltd.,Consumer Durables,0.0,-10.42,43.7,55.5,Weak Momentum (<=0),N/A,488.25
+BPCL,Bharat Petroleum Corporation Ltd.,Oil Gas & Consumable Fuels,0.0,-12.16,44.6,53.7,Weak Momentum (<=0),N/A,307.6
+BHARTIARTL,Bharti Airtel Ltd.,Telecommunication,0.0,-8.78,48.8,49.6,Weak Momentum (<=0),N/A,1826.6
+BHARTIHEXA,Bharti Hexacom Ltd.,Telecommunication,0.0,-12.0,48.8,49.6,Weak Momentum (<=0),N/A,1515.6
+BIKAJI,Bikaji Foods International Ltd.,Fast Moving Consumer Goods,0.0,-1.13,45.4,53.8,Weak Momentum (<=0),N/A,674.3
+BSOFT,Birlasoft Ltd.,Information Technology,0.0,-8.73,46.3,52.1,Weak Momentum (<=0),N/A,362.2
+BLUEDART,Blue Dart Express Ltd.,Services,0.0,-9.42,44.6,53.7,Weak Momentum (<=0),N/A,5662.5
+BLUEJET,Blue Jet Healthcare Ltd.,Healthcare,0.0,-14.18,41.3,57.0,Weak Momentum (<=0),N/A,490.35
+BBTC,Bombay Burmah Trading Corporation Ltd.,Fast Moving Consumer Goods,0.0,-23.19,45.4,52.9,Weak Momentum (<=0),N/A,1564.3
+BOSCHLTD,Bosch Ltd.,Automobile and Auto Components,0.0,-7.73,47.1,52.1,Weak Momentum (<=0),N/A,37895.0
+FIRSTCRY,Brainbees Solutions Ltd.,Consumer Services,0.0,-29.66,41.3,57.0,Weak Momentum (<=0),N/A,238.71
+BRIGADE,Brigade Enterprises Ltd.,Realty,0.0,-21.74,40.5,57.9,Weak Momentum (<=0),N/A,773.15
+BRITANNIA,Britannia Industries Ltd.,Fast Moving Consumer Goods,0.0,-6.43,50.4,48.7,Weak Momentum (<=0),N/A,5814.0
+MAPMYINDIA,C.E. Info Systems Ltd.,Information Technology,0.0,-49.16,41.2,57.1,Weak Momentum (<=0),N/A,968.1
+CRISIL,CRISIL Ltd.,Financial Services,0.0,-15.58,43.8,54.5,Weak Momentum (<=0),N/A,4152.0
+CANBK,Canara Bank,Financial Services,0.0,-2.48,47.9,50.4,Weak Momentum (<=0),N/A,135.93
+CAPLIPOINT,Caplin Point Laboratories Ltd.,Healthcare,0.0,-13.66,45.4,53.8,Weak Momentum (<=0),N/A,1866.6
+CGCL,Capri Global Capital Ltd.,Financial Services,0.0,-2.84,44.6,52.9,Weak Momentum (<=0),N/A,200.14
+CARTRADE,Cartrade Tech Ltd.,Consumer Services,0.0,-33.53,41.3,57.0,Weak Momentum (<=0),N/A,1921.8
+CASTROLIND,Castrol India Ltd.,Oil Gas & Consumable Fuels,0.0,-0.16,47.1,50.4,Weak Momentum (<=0),N/A,185.52
+CEATLTD,Ceat Ltd.,Automobile and Auto Components,0.0,-18.87,43.8,54.5,Weak Momentum (<=0),N/A,3357.7
+CEMPRO,Cemindia Projects Ltd.,Construction,0.0,-3.78,46.2,53.8,Weak Momentum (<=0),N/A,970.3
+CENTRALBK,Central Bank of India,Financial Services,0.0,-3.5,49.6,47.9,Weak Momentum (<=0),N/A,36.64
+CDSL,Central Depository Services (India) Ltd.,Financial Services,0.0,-15.95,43.0,55.4,Weak Momentum (<=0),N/A,1269.8
+CHALET,Chalet Hotels Ltd.,Consumer Services,0.0,-14.04,41.3,57.0,Weak Momentum (<=0),N/A,791.15
+CHAMBLFERT,Chambal Fertilizers & Chemicals Ltd.,Chemicals,0.0,-1.23,53.7,43.8,Weak Momentum (<=0),N/A,453.95
+CHOICEIN,Choice International Ltd.,Financial Services,0.0,-14.41,44.5,54.6,Weak Momentum (<=0),N/A,689.95
+CHOLAHLDNG,Cholamandalam Financial Holdings Ltd.,Financial Services,0.0,-12.82,43.0,55.4,Weak Momentum (<=0),N/A,1755.0
+CHOLAFIN,Cholamandalam Investment and Finance Company Ltd.,Financial Services,0.0,-1.82,46.3,52.1,Weak Momentum (<=0),N/A,1689.2
+CIPLA,Cipla Ltd.,Healthcare,0.0,-5.95,48.8,49.6,Weak Momentum (<=0),N/A,1362.3
+CLEAN,Clean Science and Technology Ltd.,Chemicals,0.0,-4.81,45.5,52.9,Weak Momentum (<=0),N/A,876.9
+COFORGE,Coforge Ltd.,Information Technology,0.0,-27.86,45.5,52.9,Weak Momentum (<=0),N/A,1285.3
+COHANCE,Cohance Lifesciences Ltd.,Healthcare,0.0,-28.19,40.2,59.0,Weak Momentum (<=0),N/A,484.85
+COLPAL,Colgate Palmolive (India) Ltd.,Fast Moving Consumer Goods,0.0,-0.9,51.2,47.1,Weak Momentum (<=0),N/A,2167.0
+CONCORDBIO,Concord Biotech Ltd.,Healthcare,0.0,-10.77,45.5,52.9,Weak Momentum (<=0),N/A,1198.7
+COROMANDEL,Coromandel International Ltd.,Chemicals,0.0,-5.15,46.3,52.1,Weak Momentum (<=0),N/A,1965.0
+CYIENT,Cyient Ltd.,Information Technology,0.0,-24.73,43.8,54.5,Weak Momentum (<=0),N/A,894.4
+DCMSHRIRAM,DCM Shriram Ltd.,Diversified,0.0,-1.11,44.4,54.7,Weak Momentum (<=0),N/A,1260.5
+DLF,DLF Ltd.,Realty,0.0,-15.56,46.3,52.1,Weak Momentum (<=0),N/A,618.85
+DOMS,DOMS Industries Ltd.,Fast Moving Consumer Goods,0.0,-7.12,45.4,53.8,Weak Momentum (<=0),N/A,2356.8
+DABUR,Dabur India Ltd.,Fast Moving Consumer Goods,0.0,-5.39,47.9,48.8,Weak Momentum (<=0),N/A,470.0
+DALBHARAT,Dalmia Bharat Ltd.,Construction Materials,0.0,-7.22,44.5,53.8,Weak Momentum (<=0),N/A,1974.3
+DEVYANI,Devyani International Ltd.,Consumer Services,0.0,-16.01,38.8,59.5,Weak Momentum (<=0),N/A,118.89
+DIXON,Dixon Technologies (India) Ltd.,Consumer Durables,0.0,-26.3,40.5,57.9,Weak Momentum (<=0),N/A,11048.0
+LALPATHLAB,Dr. Lal Path Labs Ltd.,Healthcare,0.0,-2.1,46.3,52.1,Weak Momentum (<=0),N/A,1565.5
+EIDPARRY,E.I.D. Parry (India) Ltd.,Fast Moving Consumer Goods,0.0,-16.86,42.0,57.1,Weak Momentum (<=0),N/A,847.35
+EIHOTEL,EIH Ltd.,Consumer Services,0.0,-17.94,43.8,54.5,Weak Momentum (<=0),N/A,334.95
+EMAMILTD,Emami Ltd.,Fast Moving Consumer Goods,0.0,-9.43,44.6,53.7,Weak Momentum (<=0),N/A,454.4
+ENDURANCE,Endurance Technologies Ltd.,Automobile and Auto Components,0.0,-10.94,46.3,52.1,Weak Momentum (<=0),N/A,2536.2
+ERIS,Eris Lifesciences Ltd.,Healthcare,0.0,-17.37,43.6,56.4,Weak Momentum (<=0),N/A,1383.2
+ESCORTS,Escorts Kubota Ltd.,Capital Goods,0.0,-11.19,45.5,52.9,Weak Momentum (<=0),N/A,3345.9
+ETERNAL,Eternal Ltd.,Consumer Services,0.0,-21.27,45.3,53.8,Weak Momentum (<=0),N/A,257.42
+EXIDEIND,Exide Industries Ltd.,Automobile and Auto Components,0.0,-5.91,41.3,57.0,Weak Momentum (<=0),N/A,364.45
+FSL,Firstsource Solutions Ltd.,Services,0.0,-30.7,44.6,53.7,Weak Momentum (<=0),N/A,235.18
+FIVESTAR,Five-Star Business Finance Ltd.,Financial Services,0.0,-19.23,38.7,59.7,Weak Momentum (<=0),N/A,473.25
+FORTIS,Fortis Healthcare Ltd.,Healthcare,0.0,-2.22,43.8,52.9,Weak Momentum (<=0),N/A,947.7
+GABRIEL,Gabriel India Ltd.,Automobile and Auto Components,0.0,-13.52,44.6,53.7,Weak Momentum (<=0),N/A,1126.6
+GILLETTE,Gillette India Ltd.,Fast Moving Consumer Goods,0.0,-1.11,43.8,54.5,Weak Momentum (<=0),N/A,7932.5
+GLAND,Gland Pharma Ltd.,Healthcare,0.0,-0.1,45.4,53.8,Weak Momentum (<=0),N/A,1870.6
+MEDANTA,Global Health Ltd.,Healthcare,0.0,-14.99,47.9,51.3,Weak Momentum (<=0),N/A,1206.9
+GODIGIT,Go Digit General Insurance Ltd.,Financial Services,0.0,-8.67,45.4,53.8,Weak Momentum (<=0),N/A,315.4
+GODREJCP,Godrej Consumer Products Ltd.,Fast Moving Consumer Goods,0.0,-7.13,52.1,45.5,Weak Momentum (<=0),N/A,1036.6
+GODREJPROP,Godrej Properties Ltd.,Realty,0.0,-14.4,47.9,49.6,Weak Momentum (<=0),N/A,1878.6
+GSPL,Gujarat State Petronet Ltd.,Oil Gas & Consumable Fuels,0.0,-3.02,48.7,50.4,Weak Momentum (<=0),N/A,296.75
+HBLENGINE,HBL Engineering Ltd.,Capital Goods,0.0,-27.2,47.0,53.0,Weak Momentum (<=0),N/A,848.2
+HCLTECH,HCL Technologies Ltd.,Information Technology,0.0,-21.42,51.2,47.1,Weak Momentum (<=0),N/A,1183.4
+HDBFS,HDB Financial Services Ltd.,Financial Services,0.0,-5.04,44.6,53.7,Weak Momentum (<=0),N/A,700.55
+HDFCAMC,HDFC Asset Management Company Ltd.,Financial Services,0.0,-0.85,46.3,51.2,Weak Momentum (<=0),N/A,2834.6
+HDFCBANK,HDFC Bank Ltd.,Financial Services,0.0,-19.0,38.8,59.5,Weak Momentum (<=0),N/A,796.05
+HDFCLIFE,HDFC Life Insurance Company Ltd.,Financial Services,0.0,-11.83,45.5,52.9,Weak Momentum (<=0),N/A,625.4
+HAVELLS,Havells India Ltd.,Consumer Durables,0.0,-8.19,48.8,49.6,Weak Momentum (<=0),N/A,1268.9
+HEROMOTOCO,Hero MotoCorp Ltd.,Automobile and Auto Components,0.0,-2.17,51.2,47.1,Weak Momentum (<=0),N/A,5343.0
+HEXT,Hexaware Technologies Ltd.,Information Technology,0.0,-31.83,47.0,53.0,Weak Momentum (<=0),N/A,460.55
+HINDPETRO,Hindustan Petroleum Corporation Ltd.,Oil Gas & Consumable Fuels,0.0,-18.88,43.0,54.5,Weak Momentum (<=0),N/A,396.5
+HINDUNILVR,Hindustan Unilever Ltd.,Fast Moving Consumer Goods,0.0,-4.98,48.8,49.6,Weak Momentum (<=0),N/A,2272.2
+HOMEFIRST,Home First Finance Company India Ltd.,Financial Services,0.0,-2.86,43.7,55.5,Weak Momentum (<=0),N/A,1217.5
+HONAUT,Honeywell Automation India Ltd.,Capital Goods,0.0,-16.58,36.8,61.5,Weak Momentum (<=0),N/A,30605.0
+HUDCO,Housing & Urban Development Corporation Ltd.,Financial Services,0.0,-0.64,49.6,48.8,Weak Momentum (<=0),N/A,228.01
+HYUNDAI,Hyundai Motor India Ltd.,Automobile and Auto Components,0.0,-21.49,45.5,52.9,Weak Momentum (<=0),N/A,1835.8
+ICICIBANK,ICICI Bank Ltd.,Financial Services,0.0,-4.9,43.8,54.5,Weak Momentum (<=0),N/A,1279.0
+ICICIGI,ICICI Lombard General Insurance Company Ltd.,Financial Services,0.0,-8.87,45.5,52.9,Weak Momentum (<=0),N/A,1850.2
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd.,Financial Services,0.0,-10.76,51.2,47.1,Weak Momentum (<=0),N/A,562.9
+IDBI,IDBI Bank Ltd.,Financial Services,0.0,-30.07,45.5,52.9,Weak Momentum (<=0),N/A,75.76
+IDFCFIRSTB,IDFC First Bank Ltd.,Financial Services,0.0,-11.34,49.6,47.9,Weak Momentum (<=0),N/A,70.39
+IIFL,IIFL Finance Ltd.,Financial Services,0.0,-12.76,45.5,52.1,Weak Momentum (<=0),N/A,464.2
+ITCHOTELS,ITC Hotels Ltd.,Consumer Services,0.0,-27.15,42.6,57.4,Weak Momentum (<=0),N/A,166.18
+ITC,ITC Ltd.,Fast Moving Consumer Goods,0.0,-13.82,41.3,56.2,Weak Momentum (<=0),N/A,307.4
+ITI,ITI Ltd.,Telecommunication,0.0,-5.31,40.5,57.9,Weak Momentum (<=0),N/A,303.65
+INDGN,Indegene Ltd.,Healthcare,0.0,-1.6,44.6,52.9,Weak Momentum (<=0),N/A,531.4
+INDIAMART,Indiamart Intermesh Ltd.,Consumer Services,0.0,-16.15,43.8,53.7,Weak Momentum (<=0),N/A,2091.0
+IEX,Indian Energy Exchange Ltd.,Financial Services,0.0,-5.2,46.3,51.2,Weak Momentum (<=0),N/A,133.81
+INDHOTEL,Indian Hotels Co. Ltd.,Consumer Services,0.0,-4.07,54.5,43.8,Weak Momentum (<=0),N/A,669.1
+IOC,Indian Oil Corporation Ltd.,Oil Gas & Consumable Fuels,0.0,-6.66,49.6,48.8,Weak Momentum (<=0),N/A,146.89
+IOB,Indian Overseas Bank,Financial Services,0.0,-9.17,40.5,57.0,Weak Momentum (<=0),N/A,35.17
+IRCTC,Indian Railway Catering And Tourism Corporation Ltd.,Consumer Services,0.0,-19.03,43.0,55.4,Weak Momentum (<=0),N/A,568.5
+IRFC,Indian Railway Finance Corporation Ltd.,Financial Services,0.0,-8.2,47.1,51.2,Weak Momentum (<=0),N/A,106.77
+IREDA,Indian Renewable Energy Development Agency Ltd.,Financial Services,0.0,-3.4,42.1,56.2,Weak Momentum (<=0),N/A,135.56
+IGL,Indraprastha Gas Ltd.,Oil Gas & Consumable Fuels,0.0,-12.95,42.1,56.2,Weak Momentum (<=0),N/A,169.84
+NAUKRI,Info Edge (India) Ltd.,Consumer Services,0.0,-27.22,43.0,55.4,Weak Momentum (<=0),N/A,981.85
+INFY,Infosys Ltd.,Information Technology,0.0,-24.36,46.3,52.1,Weak Momentum (<=0),N/A,1162.7
+INOXWIND,Inox Wind Ltd.,Capital Goods,0.0,-28.45,39.7,58.7,Weak Momentum (<=0),N/A,106.65
+INTELLECT,Intellect Design Arena Ltd.,Information Technology,0.0,-22.39,42.1,56.2,Weak Momentum (<=0),N/A,782.15
+INDIGO,InterGlobe Aviation Ltd.,Services,0.0,-23.44,47.1,52.1,Weak Momentum (<=0),N/A,4506.9
+IKS,Inventurus Knowledge Solutions Ltd.,Information Technology,0.0,-3.22,46.2,52.9,Weak Momentum (<=0),N/A,1695.7
+JBMA,JBM Auto Ltd.,Automobile and Auto Components,0.0,-2.67,42.1,56.2,Weak Momentum (<=0),N/A,624.2
+JKTYRE,JK Tyre & Industries Ltd.,Automobile and Auto Components,0.0,-12.52,47.9,50.4,Weak Momentum (<=0),N/A,410.25
+JMFINANCIL,JM Financial Ltd.,Financial Services,0.0,-4.71,46.3,52.1,Weak Momentum (<=0),N/A,142.85
+JSWCEMENT,JSW Cement Ltd.,Construction Materials,0.0,-2.95,44.6,53.7,Weak Momentum (<=0),N/A,125.01
+JSWDULUX,JSW Dulux Ltd.,Consumer Durables,0.0,0.0,45.0,55.0,Weak Momentum (<=0),N/A,2966.4
+JSWINFRA,JSW Infrastructure Ltd.,Services,0.0,-4.13,46.2,53.8,Weak Momentum (<=0),N/A,281.2
+JIOFIN,Jio Financial Services Ltd.,Financial Services,0.0,-15.5,41.9,56.4,Weak Momentum (<=0),N/A,251.02
+JUBLFOOD,Jubilant Foodworks Ltd.,Consumer Services,0.0,-17.7,39.7,57.9,Weak Momentum (<=0),N/A,479.0
+JUBLPHARMA,Jubilant Pharmova Ltd.,Healthcare,0.0,-15.25,46.2,52.9,Weak Momentum (<=0),N/A,981.15
+JWL,Jupiter Wagons Ltd.,Capital Goods,0.0,-0.49,43.0,54.5,Weak Momentum (<=0),N/A,303.75
+JYOTICNC,Jyoti CNC Automation Ltd.,Capital Goods,0.0,-11.54,45.5,52.1,Weak Momentum (<=0),N/A,773.2
+KPITTECH,KPIT Technologies Ltd.,Information Technology,0.0,-40.29,40.5,57.9,Weak Momentum (<=0),N/A,722.65
+KAJARIACER,Kajaria Ceramics Ltd.,Consumer Durables,0.0,-6.15,49.6,48.8,Weak Momentum (<=0),N/A,1098.8
+KALYANKJIL,Kalyan Jewellers India Ltd.,Consumer Durables,0.0,-21.05,41.3,57.0,Weak Momentum (<=0),N/A,411.15
+KAYNES,Kaynes Technology India Ltd.,Capital Goods,0.0,-29.47,43.0,55.4,Weak Momentum (<=0),N/A,4379.7
+KEC,Kec International Ltd.,Construction,0.0,-7.98,46.3,52.1,Weak Momentum (<=0),N/A,612.45
+KFINTECH,Kfin Technologies Ltd.,Financial Services,0.0,-16.45,42.1,56.2,Weak Momentum (<=0),N/A,927.55
+KOTAKBANK,Kotak Mahindra Bank Ltd.,Financial Services,0.0,-11.26,45.5,52.1,Weak Momentum (<=0),N/A,379.4
+LTTS,L&T Technology Services Ltd.,Information Technology,0.0,-9.26,48.8,49.6,Weak Momentum (<=0),N/A,3772.9
+LTM,LTM Ltd.,Information Technology,0.0,-5.26,46.9,53.1,Weak Momentum (<=0),N/A,4250.0
+LATENTVIEW,Latent View Analytics Ltd.,Information Technology,0.0,-37.39,33.1,64.5,Weak Momentum (<=0),N/A,310.6
+THELEELA,Leela Palaces Hotels & Resorts Ltd.,Consumer Services,0.0,-5.18,49.6,49.6,Weak Momentum (<=0),N/A,420.75
+LEMONTREE,Lemon Tree Hotels Ltd.,Consumer Services,0.0,-30.35,44.6,53.7,Weak Momentum (<=0),N/A,121.81
+LICI,Life Insurance Corporation of India,Financial Services,0.0,-7.56,43.8,54.5,Weak Momentum (<=0),N/A,811.15
+LODHA,Lodha Developers Ltd.,Realty,0.0,-17.56,45.5,52.9,Weak Momentum (<=0),N/A,967.35
+MRF,MRF Ltd.,Automobile and Auto Components,0.0,-17.2,41.0,58.1,Weak Momentum (<=0),N/A,129965.0
+MGL,Mahanagar Gas Ltd.,Oil Gas & Consumable Fuels,0.0,-4.52,48.7,50.4,Weak Momentum (<=0),N/A,1179.8
+M&M,Mahindra & Mahindra Ltd.,Automobile and Auto Components,0.0,-10.34,45.5,52.9,Weak Momentum (<=0),N/A,3370.7
+MRPL,Mangalore Refinery & Petrochemicals Ltd.,Oil Gas & Consumable Fuels,0.0,-8.88,41.3,57.0,Weak Momentum (<=0),N/A,155.35
+MARUTI,Maruti Suzuki India Ltd.,Automobile and Auto Components,0.0,-10.07,48.8,49.6,Weak Momentum (<=0),N/A,13770.0
+MAXHEALTH,Max Healthcare Institute Ltd.,Healthcare,0.0,-3.91,49.6,48.8,Weak Momentum (<=0),N/A,1015.3
+MAZDOCK,Mazagoan Dock Shipbuilders Ltd.,Capital Goods,0.0,-4.64,50.4,47.9,Weak Momentum (<=0),N/A,2683.3
+MINDACORP,Minda Corporation Ltd.,Automobile and Auto Components,0.0,-11.98,43.7,55.5,Weak Momentum (<=0),N/A,536.7
+MSUMI,Motherson Sumi Wiring India Ltd.,Automobile and Auto Components,0.0,-11.23,44.6,53.7,Weak Momentum (<=0),N/A,42.83
+MOTILALOFS,Motilal Oswal Financial Services Ltd.,Financial Services,0.0,-13.07,36.4,62.0,Weak Momentum (<=0),N/A,891.3
+MPHASIS,MphasiS Ltd.,Information Technology,0.0,-24.37,48.8,49.6,Weak Momentum (<=0),N/A,2193.1
+NBCC,NBCC (India) Ltd.,Construction,0.0,-16.2,41.3,57.0,Weak Momentum (<=0),N/A,96.85
+NCC,NCC Ltd.,Construction,0.0,-13.8,45.5,52.9,Weak Momentum (<=0),N/A,170.08
+NSLNISP,NMDC Steel Ltd.,Metals & Mining,0.0,-2.04,48.8,49.6,Weak Momentum (<=0),N/A,44.24
+NEULANDLAB,Neuland Laboratories Ltd.,Healthcare,0.0,-5.46,40.5,57.9,Weak Momentum (<=0),N/A,17285.0
+NEWGEN,Newgen Software Technologies Ltd.,Information Technology,0.0,-45.39,35.5,62.8,Weak Momentum (<=0),N/A,500.65
+NUVOCO,Nuvoco Vistas Corporation Ltd.,Construction Materials,0.0,-6.85,44.6,53.7,Weak Momentum (<=0),N/A,336.45
+OBEROIRLTY,Oberoi Realty Ltd.,Realty,0.0,-6.77,46.2,52.1,Weak Momentum (<=0),N/A,1675.0
+OLAELEC,Ola Electric Mobility Ltd.,Automobile and Auto Components,0.0,-27.22,40.5,57.9,Weak Momentum (<=0),N/A,35.09
+OLECTRA,Olectra Greentech Ltd.,Automobile and Auto Components,0.0,-13.8,42.1,55.4,Weak Momentum (<=0),N/A,1269.8
+PAYTM,One 97 Communications Ltd.,Financial Services,0.0,-15.41,43.8,54.5,Weak Momentum (<=0),N/A,1197.4
+POLICYBZR,PB Fintech Ltd.,Financial Services,0.0,-2.78,47.9,52.1,Weak Momentum (<=0),N/A,1684.1
+PCBL,PCBL Chemical Ltd.,Chemicals,0.0,-12.76,40.5,57.9,Weak Momentum (<=0),N/A,304.45
+PGEL,PG Electroplast Ltd.,Consumer Durables,0.0,-3.57,48.8,49.6,Weak Momentum (<=0),N/A,535.5
+PIIND,PI Industries Ltd.,Chemicals,0.0,-18.57,43.8,54.5,Weak Momentum (<=0),N/A,3101.5
+PTCIL,PTC Industries Ltd.,Capital Goods,0.0,-2.43,49.6,49.6,Weak Momentum (<=0),N/A,16814.0
+PVRINOX,PVR INOX Ltd.,Media Entertainment & Publication,0.0,-9.27,46.2,53.8,Weak Momentum (<=0),N/A,1066.1
+PAGEIND,Page Industries Ltd.,Textiles,0.0,-3.57,42.7,57.3,Weak Momentum (<=0),N/A,37345.0
+PARADEEP,Paradeep Phosphates Ltd.,Chemicals,0.0,-22.04,43.0,55.4,Weak Momentum (<=0),N/A,127.39
+PATANJALI,Patanjali Foods Ltd.,Fast Moving Consumer Goods,0.0,-21.53,50.4,47.9,Weak Momentum (<=0),N/A,460.35
+PERSISTENT,Persistent Systems Ltd.,Information Technology,0.0,-18.04,47.1,50.4,Weak Momentum (<=0),N/A,4984.0
+PFIZER,Pfizer Ltd.,Healthcare,0.0,-6.36,43.7,55.5,Weak Momentum (<=0),N/A,4750.6
+PWL,Physicswallah Ltd.,Consumer Services,0.0,-14.04,39.6,60.4,Weak Momentum (<=0),N/A,109.94
+PINELABS,Pine Labs Ltd.,Financial Services,0.0,-10.16,44.4,53.8,Weak Momentum (<=0),N/A,201.62
+PPLPHARMA,Piramal Pharma Ltd.,Healthcare,0.0,-5.77,47.9,50.4,Weak Momentum (<=0),N/A,183.73
+POLYMED,Poly Medicure Ltd.,Healthcare,0.0,-14.26,38.0,60.3,Weak Momentum (<=0),N/A,1679.9
+POONAWALLA,Poonawalla Fincorp Ltd.,Financial Services,0.0,-0.53,50.4,47.9,Weak Momentum (<=0),N/A,455.7
+PREMIERENE,Premier Energies Ltd.,Capital Goods,0.0,-5.04,49.6,48.8,Weak Momentum (<=0),N/A,1017.75
+PRESTIGE,Prestige Estates Projects Ltd.,Realty,0.0,-16.49,48.8,49.6,Weak Momentum (<=0),N/A,1483.5
+PNB,Punjab National Bank,Financial Services,0.0,-9.99,52.1,46.3,Weak Momentum (<=0),N/A,109.11
+RECLTD,REC Ltd.,Financial Services,0.0,-2.77,52.1,44.6,Weak Momentum (<=0),N/A,359.75
+RHIM,RHI MAGNESITA INDIA LTD.,Capital Goods,0.0,-10.1,43.7,55.5,Weak Momentum (<=0),N/A,411.7
+RITES,RITES Ltd.,Construction,0.0,-1.13,49.6,48.8,Weak Momentum (<=0),N/A,228.82
+RAINBOW,Rainbow Childrens Medicare Ltd.,Healthcare,0.0,-5.16,42.0,57.1,Weak Momentum (<=0),N/A,1292.2
+REDINGTON,Redington Ltd.,Services,0.0,-18.0,45.5,52.9,Weak Momentum (<=0),N/A,224.49
+RELIANCE,Reliance Industries Ltd.,Oil Gas & Consumable Fuels,0.0,-2.73,48.8,48.8,Weak Momentum (<=0),N/A,1436.2
+RPOWER,Reliance Power Ltd.,Power,0.0,-26.94,41.3,57.0,Weak Momentum (<=0),N/A,29.12
+SBFC,SBFC Finance Ltd.,Financial Services,0.0,-20.54,46.2,53.0,Weak Momentum (<=0),N/A,96.76
+SBICARD,SBI Cards and Payment Services Ltd.,Financial Services,0.0,-20.71,44.6,52.1,Weak Momentum (<=0),N/A,648.15
+SBILIFE,SBI Life Insurance Company Ltd.,Financial Services,0.0,-6.86,52.1,46.3,Weak Momentum (<=0),N/A,1872.2
+SJVN,SJVN Ltd.,Power,0.0,-3.11,44.6,53.7,Weak Momentum (<=0),N/A,79.89
+SRF,SRF Ltd.,Chemicals,0.0,-6.71,47.1,51.2,Weak Momentum (<=0),N/A,2771.3
+SAGILITY,Sagility Ltd.,Information Technology,0.0,-15.14,46.3,51.2,Weak Momentum (<=0),N/A,42.81
+SAMMAANCAP,Sammaan Capital Ltd.,Financial Services,0.0,-7.28,45.5,52.9,Weak Momentum (<=0),N/A,151.78
+SAPPHIRE,Sapphire Foods India Ltd.,Consumer Services,0.0,-28.47,38.8,59.5,Weak Momentum (<=0),N/A,187.99
+SAREGAMA,Saregama India Ltd,Media Entertainment & Publication,0.0,-14.17,41.2,58.0,Weak Momentum (<=0),N/A,349.85
+SHREECEM,Shree Cement Ltd.,Construction Materials,0.0,-7.01,52.1,45.5,Weak Momentum (<=0),N/A,25595.0
+SIGNATURE,Signatureglobal (India) Ltd.,Realty,0.0,-14.11,49.6,50.4,Weak Momentum (<=0),N/A,903.75
+SOBHA,Sobha Ltd.,Realty,0.0,-8.49,46.2,52.9,Weak Momentum (<=0),N/A,1451.0
+SONATSOFTW,Sonata Software Ltd.,Information Technology,0.0,-28.28,41.3,57.0,Weak Momentum (<=0),N/A,270.75
+SUMICHEM,Sumitomo Chemical India Ltd.,Chemicals,0.0,-0.14,50.4,47.1,Weak Momentum (<=0),N/A,498.9
+SUNDARMFIN,Sundaram Finance Ltd.,Financial Services,0.0,-4.8,52.1,46.3,Weak Momentum (<=0),N/A,4739.0
+SUPREMEIND,Supreme Industries Ltd.,Capital Goods,0.0,-6.82,44.6,53.7,Weak Momentum (<=0),N/A,3664.9
+SUZLON,Suzlon Energy Ltd.,Capital Goods,0.0,-0.54,43.0,53.7,Weak Momentum (<=0),N/A,55.65
+SWANCORP,Swan Corp Ltd.,Chemicals,0.0,-26.19,37.2,61.2,Weak Momentum (<=0),N/A,355.4
+SWIGGY,Swiggy Ltd.,Consumer Services,0.0,-28.08,42.1,56.2,Weak Momentum (<=0),N/A,279.5
+SYNGENE,Syngene International Ltd.,Healthcare,0.0,-23.96,42.1,56.2,Weak Momentum (<=0),N/A,467.35
+TBOTEK,TBO Tek Ltd.,Consumer Services,0.0,-21.77,44.5,54.6,Weak Momentum (<=0),N/A,1265.2
+TATACHEM,Tata Chemicals Ltd.,Chemicals,0.0,-2.11,36.4,62.0,Weak Momentum (<=0),N/A,805.35
+TATACOMM,Tata Communications Ltd.,Telecommunication,0.0,-13.67,46.3,51.2,Weak Momentum (<=0),N/A,1593.5
+TCS,Tata Consultancy Services Ltd.,Information Technology,0.0,-21.67,47.1,51.2,Weak Momentum (<=0),N/A,2401.4
+TATAELXSI,Tata Elxsi Ltd.,Information Technology,0.0,-20.08,44.6,53.7,Weak Momentum (<=0),N/A,4297.4
+TATAINVEST,Tata Investment Corporation Ltd.,Financial Services,0.0,-6.22,43.0,55.4,Weak Momentum (<=0),N/A,732.5
+TMPV,Tata Motors Passenger Vehicles Ltd.,Automobile and Auto Components,0.0,-20.57,44.4,54.7,Weak Momentum (<=0),N/A,359.25
+TATATECH,Tata Technologies Ltd.,Information Technology,0.0,-17.47,48.7,51.3,Weak Momentum (<=0),N/A,629.25
+TTML,Tata Teleservices (Maharashtra) Ltd.,Telecommunication,0.0,-20.34,36.4,61.2,Weak Momentum (<=0),N/A,44.86
+TECHNOE,Techno Electric & Engineering Company Ltd.,Construction,0.0,-2.18,44.6,53.7,Weak Momentum (<=0),N/A,1282.2
+TEGA,Tega Industries Ltd.,Capital Goods,0.0,-12.38,44.5,54.6,Weak Momentum (<=0),N/A,1646.3
+TEJASNET,Tejas Networks Ltd.,Telecommunication,0.0,-13.38,39.7,58.7,Weak Momentum (<=0),N/A,533.4
+NIACL,The New India Assurance Company Ltd.,Financial Services,0.0,-9.08,41.3,56.2,Weak Momentum (<=0),N/A,164.99
+RAMCOCEM,The Ramco Cements Ltd.,Construction Materials,0.0,-5.02,49.6,49.6,Weak Momentum (<=0),N/A,959.95
+TARIL,Transformers And Rectifiers (India) Ltd.,Capital Goods,0.0,-1.6,44.4,55.6,Weak Momentum (<=0),N/A,328.25
+TRENT,Trent Ltd.,Consumer Services,0.0,-3.05,47.9,50.4,Weak Momentum (<=0),N/A,4294.1
+TRIDENT,Trident Ltd.,Textiles,0.0,-4.27,42.1,56.2,Weak Momentum (<=0),N/A,26.82
+TIINDIA,Tube Investments of India Ltd.,Automobile and Auto Components,0.0,-3.84,49.6,48.8,Weak Momentum (<=0),N/A,3015.5
+UCOBANK,UCO Bank,Financial Services,0.0,-13.1,47.1,51.2,Weak Momentum (<=0),N/A,27.29
+UNOMINDA,UNO Minda Ltd.,Automobile and Auto Components,0.0,-10.36,46.3,51.2,Weak Momentum (<=0),N/A,1145.7
+UPL,UPL Ltd.,Chemicals,0.0,-14.84,47.9,49.6,Weak Momentum (<=0),N/A,650.45
+UTIAMC,UTI Asset Management Company Ltd.,Financial Services,0.0,-20.07,41.3,57.0,Weak Momentum (<=0),N/A,974.95
+UBL,United Breweries Ltd.,Fast Moving Consumer Goods,0.0,-17.72,37.8,61.3,Weak Momentum (<=0),N/A,1428.2
+UNITDSPR,United Spirits Ltd.,Fast Moving Consumer Goods,0.0,-2.81,52.1,47.9,Weak Momentum (<=0),N/A,1279.8
+VEDL,Vedanta Ltd.,Metals & Mining,0.0,-41.44,62.0,36.4,Weak Momentum (<=0),N/A,305.4
+VMM,Vishal Mega Mart Ltd.,Consumer Services,0.0,-5.31,43.8,53.7,Weak Momentum (<=0),N/A,125.42
+WELSPUNLIV,Welspun Living Ltd.,Textiles,0.0,-1.08,43.8,54.5,Weak Momentum (<=0),N/A,132.24
+WHIRLPOOL,Whirlpool of India Ltd.,Consumer Durables,0.0,-20.91,49.6,48.8,Weak Momentum (<=0),N/A,978.65
+WIPRO,Wipro Ltd.,Information Technology,0.0,-19.51,47.1,51.2,Weak Momentum (<=0),N/A,197.36
+ZENSARTECH,Zensar Technolgies Ltd.,Information Technology,0.0,-33.03,44.6,53.7,Weak Momentum (<=0),N/A,520.4
+ECLERX,eClerx Services Ltd.,Services,0.0,-36.25,43.0,55.4,Weak Momentum (<=0),N/A,1593.7
